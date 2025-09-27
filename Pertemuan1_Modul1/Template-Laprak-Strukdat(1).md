@@ -49,9 +49,23 @@ Shukla dan Sharma (2021) menjelaskan bahwa algoritma graf seperti Breadth-First 
 ### 1. ...
 
 ```C++
-source code guided 1
+#include <iostream>
+using namespace std;
+
+int main() {
+    char ch;
+
+    cout << "Masukkan sebuah karakter: ";
+    ch = getchar(); // Menggunakan getchar() untuk membaca karakter
+
+    cout << "Karakter yang Anda masukkan adalah: " << ch << endl;
+    return 0;
+}
 ```
 penjelasan singkat guided 1
+
+##### Output 1
+![Screenshot Output Unguided 1_1](https://github.com/fatirrr08/103112430153_Fatir-Gibran/blob/main/Pertemuan1_Modul1/OUTPUT/Fungsi-getchar()-foto.png)
 
 ### 2. ...
 
