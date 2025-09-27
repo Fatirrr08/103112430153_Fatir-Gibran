@@ -65,7 +65,7 @@ int main() {
 penjelasan singkat guided 1
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/fatirrr08/103112430153_Fatir-Gibran/blob/main/Pertemuan1_Modul1/OUTPUT/Fungsi-getchar()-foto.png)
+![Screenshot Output Unguided 1_1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/main/Pertemuan1_Modul1/OUTPUT/Fungsi-getchar()-foto.png)
 
 ### 2. ...
 
