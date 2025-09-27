@@ -35,7 +35,6 @@ Shasha & Zhang (1983) dalam studi perbandingan 2-3 Trees dan AVL Trees menunjukk
 Shukla dan Sharma (2021) menjelaskan bahwa algoritma graf seperti Breadth-First Search (BFS) dan Depth-First Search (DFS) sangat penting untuk eksplorasi data terhubung, sementara algoritma Dijkstra digunakan secara luas dalam menemukan jalur terpendek pada jaringan berbobot positif. Mereka menekankan bahwa implementasi graf banyak digunakan pada routing jaringan komputer, optimasi jalur transportasi, serta aplikasi dalam sistem rekomendasi berbasis graf.
 
 
-
 ## Guided 
 
 ### 1. Input "Penentuan Lebar Field"
@@ -54,7 +53,7 @@ int main() {
 Program C++ ini bertujuan menampilkan sebuah bilangan desimal. Pertama, program mengimpor library iostream untuk mendukung operasi input-output, dan using namespace std; agar penulisan cout lebih singkat. Di fungsi main(), dibuat variabel bil bertipe float yang menyimpan angka desimal, lalu diberi nilai 2.5. Dengan cout, program menampilkan teks "bilangan = " diikuti nilai variabel bil, dan endl digunakan untuk pindah ke baris baru. Program diakhiri dengan return 0; yang menunjukkan bahwa eksekusi berhasil, sehingga saat dijalankan akan terlihat output: bilangan = 2.5.
 
 ##### Output Guided 1
-![Screenshot Output Unguided 1_1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/main/Pertemuan1_Modul1/OUTPUT/Guided1.png)
+![Screenshot Output Unguided 1_1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan1_Modul1/OUTPUT/Guided1.png)
 
 ### 2. Output "Fungsi Getchar"
 
