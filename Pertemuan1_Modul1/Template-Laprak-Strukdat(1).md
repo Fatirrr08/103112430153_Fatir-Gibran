@@ -272,7 +272,7 @@ int main() {
 ### Output Unguided 2 :
 
 ##### Output 
-![Screenshot Output Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan1_Modul1/OUTPUT/Unguided1.png)
+![Screenshot Output Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan1_Modul1/OUTPUT/Unguided2.png)
 
 ### Penjelasan
 Program C++ ini digunakan untuk mengubah angka menjadi kata (terbilang) dalam bahasa Indonesia untuk angka 0 hingga 100. Pertama, dibuat dua array string: satuan untuk angka 1–9 dan belasan untuk angka 10–19. Fungsi terbilang(int n) mengubah angka menjadi kata: jika angka 0, dikembalikan "nol"; jika 1–9, menggunakan array satuan; jika 10–19, menggunakan array belasan; jika 20–99, program menghitung puluhan dan satuannya, lalu menggabungkannya menjadi string, misalnya "dua puluh tiga"; jika 100, dikembalikan "seratus"; angka di luar 0–100 menghasilkan "di luar jangkauan". Di main(), program menampilkan judul dan meminta pengguna memasukkan angka 0–100 melalui cin. Jika angka di luar jangkauan, ditampilkan pesan kesalahan; jika valid, program menampilkan angka beserta terbilangnya. return 0; menandakan program selesai dengan sukses.
@@ -308,7 +308,7 @@ int main() {
 ### Output Unguided 3 :
 
 ##### Output 
-![Screenshot Output Unguided 4](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan1_Modul1/OUTPUT/Unguided1.png)
+![Screenshot Output Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan1_Modul1/OUTPUT/Unguided3.png)
 
 ### Penjelasan
 Program C++ ini digunakan untuk menampilkan pola angka dan bintang berbentuk segitiga simetris. Program meminta pengguna memasukkan jumlah baris n, kemudian menggunakan perulangan untuk setiap baris: pertama menambahkan spasi agar pola berada di tengah, kemudian menampilkan angka menurun dari i ke 1 di sebelah kiri bintang, diikuti bintang, dan angka menaik dari 1 ke i di sebelah kanan. Setelah semua baris utama tercetak, program menampilkan bintang terakhir di bawah pola untuk melengkapi bentuk segitiga. return 0; menandakan program selesai dengan sukses.
