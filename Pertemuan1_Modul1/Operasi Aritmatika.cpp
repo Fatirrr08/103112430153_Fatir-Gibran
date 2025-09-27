@@ -18,8 +18,9 @@ int main() {
     
     if (b != 0)
     cout << "Hasil Pembagian Dari "<< a << " dan " << b << " : " << a / b << endl;
-    else if (b == 0)
-        cout << "Hasil Pembagian Dari "<< a << " dan " << b << " : " << 0 << endl;
+    else if (b == 0) {
+        cout << "Hasil Pembagian Dari "<< a << " dan " << b << " : " << b << endl;
         cout << "Setiap Angka yang di bagi dengan 0 akan menjadi 0 " << endl;
-    return 0;
+    }
+        return 0;
 }
