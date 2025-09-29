@@ -1,52 +1,96 @@
-# <h1 align="center">Laporan Praktikum Modul 1 - Codeblocks IDE & Pengenalan Bahas C++ (Bagian Pertama)</h1>
+# <h1 align="center">Laporan Praktikum Modul 2 - PENGENALAN BAHASA C++ (BAGIAN KEDUA)</h1>
 <p align="center">Fatir Gibran - 103112430153 </p>
 
 ## Dasar Teori
 
-### A. Peran Sintaks, Semantik, dan Umpan Balik Kompiler
+### A. Matriks dan Operasinya
 
-Proses belajar memprogram, sebagaimana yang dijabarkan dalam modul pengenalan C++, melibatkan penguasaan dua aspek fundamental dari sebuah bahasa: sintaks dan semantik.
+Matriks adalah sekumpulan bilangan yang disusun secara teratur dalam baris dan kolom, digunakan secara luas dalam bidang matematika dan ilmu komputer untuk merepresentasikan data multidimensi, transformasi linear, serta operasi numerik. Operasi dasar pada matriks meliputi penjumlahan, pengurangan, dan perkalian.
 
-### 1. Sintaks (Syntax): 
-Merujuk pada aturan gramatikal yang mengatur bagaimana sebuah program harus ditulis agar valid. Ini dapat dianalogikan dengan tata bahasa dalam bahasa manusia. Dalam konteks modul ini, contoh aturan sintaks adalah kewajiban untuk mengakhiri setiap pernyataan dengan titik koma (;) atau menggunakan kurung kurawal ({ }) untuk menandai sebuah blok kode. Kompiler, seperti yang terintegrasi dalam IDE Code::Blocks, berperan sebagai pemeriksa sintaks. Jika aturan dilanggar, kompiler akan gagal melakukan build dan menampilkan pesan kesalahan (error message), seperti yang ditunjukkan pada Gambar 1.18 dalam modul, di mana hilangnya titik koma menyebabkan build failed.
+Penjumlahan dan pengurangan matriks hanya dapat dilakukan apabila kedua matriks memiliki ordo yang sama, sedangkan perkalian matriks dilakukan dengan mengalikan baris dari matriks pertama dengan kolom dari matriks kedua.
 
-### 2. Semantik (Semantics): 
-Merujuk pada makna atau logika dari perintah yang ditulis. Sebuah kode bisa jadi benar secara sintaksis (tidak menghasilkan error saat kompilasi) tetapi salah secara semantik, artinya program berjalan namun tidak menghasilkan output yang diinginkan. Contohnya, perbedaan antara operator pre-increment (++i) dan post-increment (i++) yang dijelaskan dalam modul adalah isu semantik. Keduanya valid secara sintaksis, namun penggunaannya yang salah akan menghasilkan nilai yang berbeda dan menyebabkan kesalahan logika dalam program.
+Dalam pemrograman, matriks direpresentasikan dengan array dua dimensi. Setiap operasi dilakukan dengan menggunakan perulangan bersarang (nested loop) untuk mengakses elemen-elemen matriks berdasarkan indeks baris dan kolomnya. Kompleksitas waktu operasi dasar matriks umumnya adalah:
 
-Bagi seorang pemula, tantangan utama adalah menerjemahkan logika penyelesaian masalah (semantik) ke dalam aturan penulisan yang kaku (sintaks). Proses ini dimediasi oleh IDE, yang memberikan umpan balik (berupa pesan kesalahan) ketika sintaks tidak terpenuhi. Kemampuan untuk memahami dan menafsirkan pesan kesalahan dari kompiler adalah salah satu keterampilan paling krusial yang dikembangkan selama praktikum, karena ini adalah jembatan untuk memperbaiki ketidaksesuaian antara niat logis programmer dan tuntutan gramatikal bahasa.
+Penjumlahan/Pengurangan: O(n²)
+Perkalian (klasik): O(n³)
 
-### B. Hash Table & Collision
+Meskipun demikian, untuk ukuran kecil seperti 3x3, kompleksitas tidak menjadi masalah, namun pada skala besar diperlukan algoritma lebih efisien seperti Strassen Algorithm atau metode paralel. Matriks juga digunakan dalam berbagai aplikasi seperti grafika komputer, sistem persamaan linear, analisis data, hingga machine learning.
 
-Menurut Tapia-Fernández, García-García, dan García-Hernandez (2022), performa hash table sangat dipengaruhi oleh load factor (rasio jumlah elemen terhadap ukuran tabel) dan metode penanganan collision. Mereka menekankan bahwa metode chaining lebih stabil pada kondisi load factor tinggi, karena setiap bucket bisa menampung lebih dari satu elemen. Sebaliknya, metode open addressing lebih hemat memori, tetapi performanya bisa menurun drastis ketika terjadi banyak collision. Hal ini menunjukkan bahwa pemilihan metode hashing harus disesuaikan dengan kebutuhan sistem dan karakteristik data yang digunakan.
+### B. Pointer dan Reference dalam C++
 
-### C. Perbandingan Metode Hashing
+Dalam bahasa pemrograman C++, terdapat dua cara utama untuk memanipulasi nilai variabel melalui fungsi: pointer dan reference.
 
-Dalam studi empiris, Hash Table dengan closed addressing (chaining) terbukti memiliki performa lebih konsisten dibandingkan open addressing pada kondisi data dengan distribusi acak dan load factor tinggi. Penelitian yang dilakukan oleh International Journal of Networked and Distributed Computing (2015) menunjukkan bahwa linear probing sebagai bentuk open addressing mengalami degradasi performa karena terjadinya clustering. Oleh karena itu, chaining sering lebih dipilih dalam implementasi praktis, terutama pada sistem dengan skala besar.
+Pointer adalah variabel yang menyimpan alamat memori dari variabel lain. Dengan pointer, program dapat mengakses dan memodifikasi nilai dari lokasi memori tertentu menggunakan operator dereferensi (*). Pointer juga memungkinkan penggunaan dinamis memori, namun memiliki risiko seperti null pointer, dangling pointer, dan kesalahan dereferensi.
 
-### D. Pencarian Data (Searching)
-Purnama (2022) membandingkan tiga algoritma pencarian, yaitu linear search, binary search, dan hash search menggunakan dataset besar dari ulasan produk Amazon. Hasil penelitian menunjukkan bahwa linear search memiliki performa paling lambat karena kompleksitas O(n), binary search lebih baik O(log n) tetapi membutuhkan data terurut, sementara hash search mendekati O(1) sehingga menjadi metode paling efisien. Hasil ini mendukung pentingnya penggunaan struktur data yang tepat sesuai dengan kebutuhan aplikasi.
+Reference adalah alias dari variabel lain, yang harus diinisialisasi saat deklarasi dan tidak dapat diubah untuk merujuk ke variabel lain. Reference memberikan cara yang lebih aman dan sederhana untuk mengakses nilai variabel dari luar fungsi tanpa risiko kesalahan memori seperti pointer.
 
-### E. Tree (AVL vs BST)
+Dalam konteks praktikum ini, pointer dan reference digunakan untuk menukar nilai tiga variabel melalui fungsi, menunjukkan konsep pass-by-pointer dan pass-by-reference.
 
-Shasha & Zhang (1983) dalam studi perbandingan 2-3 Trees dan AVL Trees menunjukkan bahwa AVL Tree lebih unggul dalam operasi pencarian karena sifatnya yang selalu seimbang, memberikan kompleksitas rata-rata O(log n). Namun, biaya untuk menjaga keseimbangan (rebalancing) membuat operasi insert dan delete sedikit lebih mahal dibandingkan dengan Binary Search Tree biasa. Penelitian ini menekankan bahwa tidak ada struktur data yang selalu unggul; pemilihan harus mempertimbangkan pola operasi yang dominan pada aplikasi.
+### C. Pencarian Nilai Maksimum, Minimum, dan Rata-rata dalam Array
 
-### F. Graph & Aplikasinya
+Array adalah struktur data statis yang menyimpan sekumpulan elemen dengan tipe data yang sama dan diakses menggunakan indeks. Untuk menemukan nilai maksimum dan minimum, dilakukan traversal dari elemen pertama hingga terakhir dan membandingkannya satu per satu.
 
-Shukla dan Sharma (2021) menjelaskan bahwa algoritma graf seperti Breadth-First Search (BFS) dan Depth-First Search (DFS) sangat penting untuk eksplorasi data terhubung, sementara algoritma Dijkstra digunakan secara luas dalam menemukan jalur terpendek pada jaringan berbobot positif. Mereka menekankan bahwa implementasi graf banyak digunakan pada routing jaringan komputer, optimasi jalur transportasi, serta aplikasi dalam sistem rekomendasi berbasis graf.
+Kompleksitas waktu untuk pencarian ini adalah O(n). Terdapat juga algoritma yang mengurangi jumlah perbandingan seperti pair method dan tournament method.
+Untuk menghitung rata-rata, dilakukan penjumlahan seluruh elemen lalu dibagi dengan jumlah elemen array. Karena semua operasi dilakukan dengan satu loop, total kompleksitas tetap O(n).
 
+Pada implementasi praktikum, digunakan tiga fungsi terpisah:
+cariMaksimum() untuk mencari nilai tertinggi
+cariMinimum() untuk mencari nilai terendah
+hitungRataRata() untuk menghitung rata-rata
+
+Ketiganya dipanggil melalui menu menggunakan switch-case untuk mendemonstrasikan modularitas dan konsep function dalam pemrograman.
+
+### C. Struktur Program Modular dan Penggunaan Fungsi
+
+Dalam pemrograman terstruktur, program yang baik sebaiknya dibagi menjadi beberapa bagian kecil yang disebut fungsi atau prosedur.
+Fungsi digunakan untuk mengembalikan nilai (misal int cariMaksimum()), sedangkan prosedur digunakan untuk proses tanpa nilai balik (misal void hitungRataRata()).
+Pendekatan modular ini meningkatkan reusabilitas, readability, dan maintainability program.
+
+### D. Pointer dan Reference dalam C++
+
+#### 1. Pointer
+
+Pointer adalah variabel yang menyimpan alamat memori dari variabel lain. Dengan pointer, program dapat mengakses atau memodifikasi data di lokasi memori tertentu menggunakan operator dereferensi *.
+Kelebihan penggunaan pointer:
+
+Memungkinkan manipulasi data secara langsung.
+
+Digunakan dalam struktur data dinamis (seperti linked list).
+
+Memungkinkan komunikasi antar fungsi melalui alamat memori (pass-by-pointer).
+
+Namun, pointer juga memiliki risiko seperti null pointer, dangling pointer, dan segmentation fault apabila digunakan tanpa hati-hati.
+
+#### 2. Reference
+
+Reference adalah alias dari variabel lain. Setelah diinisialisasi, reference selalu menunjuk ke variabel yang sama dan tidak bisa diubah untuk merujuk ke variabel lain. Reference digunakan untuk:
+
+Pass-by-reference ke fungsi (tanpa menyalin nilai).
+
+Membuat kode lebih aman dan lebih mudah dibaca dibanding pointer.
+
+Dalam konteks praktikum, keduanya digunakan untuk menukar nilai tiga variabel melalui dua pendekatan berbeda: tukar dengan pointer dan tukar dengan reference.
 
 ## Guided 
 
-### 1. Input "Penentuan Lebar Field"
+### 1. Array
 
 ```C++
 #include <iostream>
 using namespace std;
 
 int main() {
-    float bil;
-    bil = 2.5;
-    cout << "bilangan = " << bil << endl;
+    int arr[10] ;
+    
+    for (int i = 0; i < 10; i++) {
+        cout << "Masukkan value index ke- " << i << ": " ;
+        cin >> arr[i];
+    }
+    int j=0;
+    while (j<10) {
+        cout << "isi index ke- " << j << ": " << arr[j] << endl;
+        j++;
+    }
     return 0;
 }
 ```
@@ -59,19 +103,55 @@ int main() {
 Program C++ ini bertujuan menampilkan sebuah bilangan desimal. Pertama, program mengimpor library iostream untuk mendukung operasi input-output, dan using namespace std; agar penulisan cout lebih singkat. Di fungsi main(), dibuat variabel bil bertipe float yang menyimpan angka desimal, lalu diberi nilai 2.5. Dengan cout, program menampilkan teks "bilangan = " diikuti nilai variabel bil, dan endl digunakan untuk pindah ke baris baru. Program diakhiri dengan return 0; yang menunjukkan bahwa eksekusi berhasil, sehingga saat dijalankan akan terlihat output: bilangan = 2.5.
 
 
-### 2. Output "Fungsi Getchar"
+### 2. Array 2 Dimensi"
 
 ```C++
 #include <iostream>
 using namespace std;
 
+void tampilkanHasil(int arr[2][2]) {
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
 int main() {
-    char ch;
+    int arrA[2][2] = {
+        {1, 2},
+        {3, 4}
+    };
+    int arrB[2][2] = {
+        {2, 3},
+        {4, 5}
+    };
+    int arrC[2][2] = {0};
+    int arrD[2][2] = {0};
 
-    cout << "Masukkan sebuah karakter: ";
-    ch = getchar(); // Menggunakan getchar() untuk membaca karakter
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            arrC[i][j] = arrA[i][j] + arrB[i][j];
+        }
+    }
 
-    cout << "Karakter yang Anda masukkan adalah: " << ch << endl;
+    cout << "Hasil penjumlahan : " << endl;
+    tampilkanHasil(arrC);
+
+    cout << endl;
+
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            for (int k = 0; k < 2; k++) {
+                arrD[i][j] += arrA[i][k] * arrB[k][j];
+            }
+        }
+    }
+
+    cout << "Hasil perkalian : " << endl;
+    tampilkanHasil(arrD);
+
     return 0;
 }
 ```
@@ -84,17 +164,32 @@ int main() {
 Program C++ ini digunakan untuk membaca satu karakter dari pengguna dan menampilkannya ke layar. Pertama, library iostream diimpor untuk input-output, dan using namespace std; agar penulisan cout lebih sederhana. Di dalam fungsi main(), dibuat variabel ch bertipe char untuk menyimpan satu karakter. Program kemudian menampilkan pesan "Masukkan sebuah karakter: " dan menggunakan getchar() untuk membaca karakter yang diketik pengguna dari keyboard. Setelah itu, program menampilkan teks "Karakter yang Anda masukkan adalah: " diikuti karakter yang dimasukkan. return 0; menandakan program selesai dengan sukses, sehingga jika dijalankan, output akan menunjukkan karakter yang baru saja diketik.
 
 
-### 3. Operator "Operator Aritmatika"
+### 3. Pointer
 
 ```C++
 #include <iostream>
 using namespace std;
 
+void Tukar(int *x, int *y) {
+    int temp = *x;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
 int main() {
-    int W, X, Y; float Z;
-    X = 7; Y = 3; Z = 1;
-    Z = (X + Y)/(Y + W);
-    cout << "Nilai z : " << Z << endl;
+    int a = 20,b = 30;
+    int *ptr;
+    ptr = &a;
+    
+    
+    cout << "Value of a: " << a << endl;
+    cout << "Address of a: " << &a << endl;
+    cout << "Value stored int ptr (address of a): " << ptr << endl;
+    cout << "Value pointed to by ptr : " << *ptr << endl;
+
+    Tukar(&a, &b);
+    cout << "After Swaping, Value of a= " << a << " and b=" << b << endl;
     return 0;
 }
 ```
@@ -107,18 +202,35 @@ int main() {
 Program C++ ini mencoba menghitung nilai variabel Z berdasarkan operasi matematika. Di awal, dibuat variabel W, X, Y bertipe int dan Z bertipe float. Nilai X diisi 7, Y diisi 3, dan Z awalnya diisi 1. Selanjutnya, program mencoba menghitung Z = (X + Y) / (Y + W);. Namun variabel W belum diberi nilai, sehingga hasilnya tidak terdefinisi (undefined behavior) dan bisa menyebabkan error atau nilai acak saat dijalankan. Akhirnya, program menampilkan "Nilai z : " diikuti nilai Z. return 0; menandakan program selesai dengan sukses.
 
 
-### 4. Percabangan "Percabangan"
+### 4. Reference
 
 ```C++
 #include <iostream>
 using namespace std;
 
+void Tukar(int *x, int *y) {
+    int temp = *x;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
 int main() {
-    double tot_pembelian, diskon;
-    cout << "Total pembelian: Rp";
-    cin >> tot_pembelian;
-    diskon = (tot_pembelian > 100000) ? 0.05 * tot_pembelian : 0;
-    cout << "Diskon: Rp" << diskon << endl;
+    int a = 20,b = 30;
+    int& ref = a;
+
+    cout << "Nilai of a: " << a << endl;
+    cout << "Alamat a: " << &a << endl;
+    cout << "Nilai ref (Alias to a): " << ref << endl;
+    cout << "Alamat ref (&raf): " << &ref << endl;
+
+    ref = 30;
+    cout << "\nSetelah ref = 50: " << a << endl;
+    cout << "Nilai a: " << &a << endl;
+    cout << "Nilai ref: " << ref << endl;
+
+    Tukar(&a, &b);
+    cout << "Setelah Tukar, Nilai a= " << a << " dan b=" << b << endl;
     return 0;
 }
 ```
@@ -131,24 +243,49 @@ int main() {
 Program C++ ini digunakan untuk menghitung diskon pembelian berdasarkan total belanja pengguna. Pertama, dibuat variabel tot_pembelian dan diskon bertipe double agar dapat menyimpan angka desimal. Program menampilkan pesan "Total pembelian: Rp" dan menggunakan cin untuk membaca nilai total belanja dari pengguna. Selanjutnya, program menghitung diskon menggunakan operator ternary: jika tot_pembelian lebih dari 100.000, diskon sebesar 5% dari total diberikan; jika tidak, diskon 0. Hasil diskon kemudian ditampilkan dengan cout. return 0; menandakan program selesai dengan sukses.
 
 
-### 5. Perulangan "do while"
+### 5. Function Procedure
 
 ```C++
-#include <iostream>
-using namespace std;
+    #include <iostream>
+    using namespace std;
 
-int main() {
+    int cariMax(int arr[], int ukuran) {
+        int max = arr[0];
+        for (int i = 1; i < ukuran; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
 
-    int i = 1;
-    int jum;
-    cin >> jum;
-    do{
-    cout << "baris ke-" <<(i+1)<<endl;
-    i++;
-} while(i<jum);
-return 0;
-}
-```
+    void OperasiAritmatika(int arr[],int ukuran){
+        int totaljumlah = 0;
+        for(int i = 0; i < ukuran; i++){
+            totaljumlah += arr[i];
+        }
+        cout << "Total perjumlah: " << totaljumlah << endl;
+
+        int totalKali = 1;
+        for(int i = 0; i < ukuran; i++){
+            totalKali *= arr[i];
+        }
+        cout << "Total perkalian: " << totalKali << endl;
+    }
+        int main() {
+            const int ukuran = 5;
+            int arr[ukuran];
+            for (int i = 0; i < ukuran; i++) {
+            cout << "Masukkan Nilai Array ke-" << i << ": ";
+            cin >> arr[i];    
+            }
+            cout << endl;
+            cout << "Nilai Maksimum: " << cariMax(arr, ukuran) << endl;
+        
+            OperasiAritmatika(arr, ukuran);
+            return 0;
+        }
+        ```
 ##### Output Guided 5
 
 ![Screenshot Output Unguided 5](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan1_Modul1/OUTPUT/Guided5.png)
@@ -334,11 +471,17 @@ Berdasarkan praktikum modul 1 mengenai Code::Blocks IDE dan pengenalan bahasa C+
 
 ## Referensi
 
-[1]Sweller, J. (1988). Cognitive load during problem solving: Effects on learning. Cognitive Science, 12(2), 257-285. 
-<br>[2]Robins, A., Rountree, J., & Rountree, N. (2003). Learning and teaching programming: A review and discussion. Computer Science Education, 13(2), 137-172.
-<br>[3]Pears, A., et al. (2007). A survey of literature on the teaching of introductory programming. ACM SIGCSE Bulletin, 39(4), 204-223.
-<br>[4]Tapia-Fernández, S., García-García, J., & García-Hernandez, J. (2022). Key Concepts, Weakness and Benchmark on Hash Table Data Structures. Algorithms, 15(3), 100. MDPI.
-<br>[5]International Journal of Networked and Distributed Computing. (2015). Comparison of Hash Table Performance with Open Addressing and Closed Addressing: An Empirical Study, 3(1), 55–62.
-<br>[6]Purnama, I. (2022). Comparative Performance Study of Search Algorithms on Large-Scale Data Structures. Jurnal Ilmu Teknik Komputer (JITK), 6(2), 123–130.
-<br>[7]Shasha, D., & Zhang, Z. (1983). A Comparative Study of 2-3 Trees and AVL Trees. International Journal of Parallel Programming, 12(1), 35–54.
-<br>[8]Shukla, A., & Sharma, R. (2021). Applications of Graph Algorithms in Computer Science. International Journal of Computer Science and Information Security, 19(8), 12–19.
+[1]Rizani, M. (2022). Matrix: Basic Concepts And Practical Applications In Daily Life. Jurnal Ilmiah Informatika dan Komputer. ejournal.rizaniamedia.com
+<br>[2]Yusuf, A. (2023). Matrix-Based Computation in Informatics: A Conceptual Review of Linear Algebra Applications. Jurnal Ilmiah Informatika dan Komputer.
+<br>[3]Lemire, D. (2022). Matrix Operations for Engineers and Scientists: An Essential Guide in Linear Algebra. SpringerLink.
+<br>[4]Hamed, T. (2021). Pointers in C++. University of Mosul. ResearchGate.
+<br>[5]Mogha, P. (2018). Pointers in C. International Journal of Research (IJR), 5(2).
+<br>[6]Mahar, M. S., & Bisht, D. S. (2019). Features of Pointers in C. International Journal of Research.
+<br>[7]GeeksforGeeks. (2023). Maximum and Minimum in an Array.
+<br>[8]Lemire, D. (2006). Streaming Maximum-Minimum Filter Using No More than Three Comparisons per Element. arXiv preprint cs/0610046.
+<br>[9]OpenGenus. (2021). Min and Max Element in Array.
+<br>[10]Pressman, R. S. (2010). Software Engineering: A Practitioner's Approach. McGraw-Hill.
+<br>[11]Tanenbaum, A. (2015). Structured Programming Concepts. Pearson Education.
+<br>[12]Hamed, T. (2021). Pointers in C++. University of Mosul, ResearchGate.
+<br>[13]Mogha, P. (2018). Pointers in C. International Journal of Research (IJR).
+<br>[14]Mahar, M. S., & Bisht, D. S. (2019). Features of Pointers in C. IJR.
