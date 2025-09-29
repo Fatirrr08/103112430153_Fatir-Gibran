@@ -54,9 +54,7 @@ Pointer adalah variabel yang menyimpan alamat memori dari variabel lain. Dengan 
 Kelebihan penggunaan pointer:
 
 Memungkinkan manipulasi data secara langsung.
-
 Digunakan dalam struktur data dinamis (seperti linked list).
-
 Memungkinkan komunikasi antar fungsi melalui alamat memori (pass-by-pointer).
 
 Namun, pointer juga memiliki risiko seperti null pointer, dangling pointer, dan segmentation fault apabila digunakan tanpa hati-hati.
@@ -66,9 +64,7 @@ Namun, pointer juga memiliki risiko seperti null pointer, dangling pointer, dan 
 Reference adalah alias dari variabel lain. Setelah diinisialisasi, reference selalu menunjuk ke variabel yang sama dan tidak bisa diubah untuk merujuk ke variabel lain. Reference digunakan untuk:
 
 Pass-by-reference ke fungsi (tanpa menyalin nilai).
-
 Membuat kode lebih aman dan lebih mudah dibaca dibanding pointer.
-
 Dalam konteks praktikum, keduanya digunakan untuk menukar nilai tiga variabel melalui dua pendekatan berbeda: tukar dengan pointer dan tukar dengan reference.
 
 ## Guided 
