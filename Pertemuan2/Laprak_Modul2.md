@@ -11,8 +11,8 @@ Penjumlahan dan pengurangan matriks hanya dapat dilakukan apabila kedua matriks 
 
 Dalam pemrograman, matriks direpresentasikan dengan array dua dimensi. Setiap operasi dilakukan dengan menggunakan perulangan bersarang (nested loop) untuk mengakses elemen-elemen matriks berdasarkan indeks baris dan kolomnya. Kompleksitas waktu operasi dasar matriks umumnya adalah:
 
-Penjumlahan/Pengurangan: O(n²)
-Perkalian (klasik): O(n³)
+<br>Penjumlahan/Pengurangan: O(n²)
+<br>Perkalian (klasik): O(n³)
 
 Meskipun demikian, untuk ukuran kecil seperti 3x3, kompleksitas tidak menjadi masalah, namun pada skala besar diperlukan algoritma lebih efisien seperti Strassen Algorithm atau metode paralel. Matriks juga digunakan dalam berbagai aplikasi seperti grafika komputer, sistem persamaan linear, analisis data, hingga machine learning.
 
@@ -34,9 +34,9 @@ Kompleksitas waktu untuk pencarian ini adalah O(n). Terdapat juga algoritma yang
 Untuk menghitung rata-rata, dilakukan penjumlahan seluruh elemen lalu dibagi dengan jumlah elemen array. Karena semua operasi dilakukan dengan satu loop, total kompleksitas tetap O(n).
 
 Pada implementasi praktikum, digunakan tiga fungsi terpisah:
-cariMaksimum() untuk mencari nilai tertinggi
-cariMinimum() untuk mencari nilai terendah
-hitungRataRata() untuk menghitung rata-rata
+<br>cariMaksimum() untuk mencari nilai tertinggi
+<br>cariMinimum() untuk mencari nilai terendah
+<br>hitungRataRata() untuk menghitung rata-rata
 
 Ketiganya dipanggil melalui menu menggunakan switch-case untuk mendemonstrasikan modularitas dan konsep function dalam pemrograman.
 
@@ -53,9 +53,9 @@ Pendekatan modular ini meningkatkan reusabilitas, readability, dan maintainabili
 Pointer adalah variabel yang menyimpan alamat memori dari variabel lain. Dengan pointer, program dapat mengakses atau memodifikasi data di lokasi memori tertentu menggunakan operator dereferensi *.
 Kelebihan penggunaan pointer:
 
-Memungkinkan manipulasi data secara langsung.
-Digunakan dalam struktur data dinamis (seperti linked list).
-Memungkinkan komunikasi antar fungsi melalui alamat memori (pass-by-pointer).
+<br>Memungkinkan manipulasi data secara langsung.
+<br>Digunakan dalam struktur data dinamis (seperti linked list).
+<br>Memungkinkan komunikasi antar fungsi melalui alamat memori (pass-by-pointer).
 
 Namun, pointer juga memiliki risiko seperti null pointer, dangling pointer, dan segmentation fault apabila digunakan tanpa hati-hati.
 
@@ -63,8 +63,9 @@ Namun, pointer juga memiliki risiko seperti null pointer, dangling pointer, dan 
 
 Reference adalah alias dari variabel lain. Setelah diinisialisasi, reference selalu menunjuk ke variabel yang sama dan tidak bisa diubah untuk merujuk ke variabel lain. Reference digunakan untuk:
 
-Pass-by-reference ke fungsi (tanpa menyalin nilai).
-Membuat kode lebih aman dan lebih mudah dibaca dibanding pointer.
+<br>Pass-by-reference ke fungsi (tanpa menyalin nilai).
+<br>Membuat kode lebih aman dan lebih mudah dibaca dibanding pointer.
+
 Dalam konteks praktikum, keduanya digunakan untuk menukar nilai tiga variabel melalui dua pendekatan berbeda: tukar dengan pointer dan tukar dengan reference.
 
 ## Guided 
