@@ -464,7 +464,34 @@ Program C++ ini digunakan untuk menampilkan pola angka dan bintang berbentuk seg
 
 ## Kesimpulan
 
-Berdasarkan praktikum modul 1 mengenai Code::Blocks IDE dan pengenalan bahasa C++, dapat disimpulkan beberapa hal penting. Pertama, pemahaman terhadap sintaks dan semantik sangat krusial; sintaks memastikan program dapat dikompilasi, sedangkan semantik memastikan logika program berjalan sesuai tujuan. Kedua, penggunaan struktur data seperti hash table, array, struct, serta algoritma pencarian dan tree (BST/AVL) memberikan pemahaman praktis tentang bagaimana data disimpan, diakses, dan diolah secara efisien. Ketiga, konsep percabangan, perulangan, dan operator aritmatika merupakan dasar dalam menyusun logika program untuk memecahkan masalah nyata. Keempat, praktik input-output baik untuk angka, karakter, maupun konversi angka ke terbilang, membantu memahami interaksi program dengan pengguna. Terakhir, pembuatan pola angka dan bintang memperkuat pemahaman tentang penggunaan nested loop dan manipulasi output. Secara keseluruhan, praktikum ini menekankan pentingnya penguasaan dasar bahasa C++, kemampuan interpretasi pesan kesalahan kompiler, dan penerapan struktur data serta logika pemrograman dalam membangun program yang benar dan efisien.
+Berdasarkan hasil praktikum Modul 2, dapat disimpulkan beberapa hal sebagai berikut:
+
+#### Operasi Matriks 3x3
+Melalui implementasi menggunakan array dua dimensi dan perulangan bersarang (nested loop), program berhasil melakukan operasi penjumlahan, pengurangan, dan perkalian matriks. Hal ini membuktikan bahwa konsep aljabar linear dapat diterapkan secara komputasional melalui struktur data dasar di C++. Operasi tersebut memiliki kompleksitas waktu yang terukur, yaitu O(n²) untuk penjumlahan/pengurangan dan O(n³) untuk perkalian.
+
+#### Pointer dan Reference dalam Pertukaran Nilai Variabel
+Percobaan menggunakan pointer dan reference menunjukkan bahwa keduanya dapat digunakan untuk mengubah nilai variabel dari dalam fungsi tanpa perlu mengembalikan nilai secara langsung.
+
+Pointer bekerja melalui alamat memori dan memerlukan dereferensi (*).
+
+Reference bertindak sebagai alias dari variabel asli dan lebih aman digunakan karena tidak dapat bernilai null.
+Melalui percobaan ini, mahasiswa dapat memahami perbedaan antara pass-by-pointer dan pass-by-reference, serta kapan sebaiknya masing-masing digunakan.
+
+Pencarian Nilai Maksimum, Minimum, dan Rata-rata pada Array
+Dengan memanfaatkan fungsi dan prosedur, program berhasil:
+
+Menemukan nilai maksimum menggunakan fungsi cariMaksimum().
+
+Menemukan nilai minimum menggunakan fungsi cariMinimum().
+
+Menghitung rata-rata menggunakan prosedur hitungRataRata().
+Pendekatan ini mencerminkan konsep pemrograman modular, di mana program dibagi menjadi bagian-bagian kecil yang memiliki tugas spesifik. Selain itu, menu berbasis switch-case membantu dalam interaksi pengguna dan memperlihatkan struktur logika yang terkontrol.
+
+#### Pemahaman Struktur Data Dasar
+Dari keseluruhan percobaan, mahasiswa memahami pentingnya struktur data array dalam menyimpan dan memproses kumpulan data, serta bagaimana konsep fungsi, pointer, reference, dan perulangan dapat diintegrasikan untuk menyelesaikan permasalahan komputasi sederhana secara efisien.
+
+#### Keterkaitan dengan Teori
+Implementasi program ini sejalan dengan teori yang dipelajari dalam literatur, di mana operasi matriks dan pengolahan array menjadi dasar dari banyak algoritma dan aplikasi di bidang informatika, sementara pointer dan reference menjadi pondasi dalam pengelolaan memori dan struktur data tingkat lanjut.
 
 ## Referensi
 
