@@ -451,7 +451,7 @@ int main() {
 Program ini melakukan tugas yang sama dengan sebelumnya, yaitu menukar nilai tiga variabel, tetapi kali ini menggunakan reference. Fungsi TukarTiga menerima tiga parameter reference (int &). Artinya, a, b, dan c di dalam fungsi adalah alias langsung dari variabel di main. Setiap perubahan yang dilakukan pada a, b, dan c di dalam fungsi akan langsung memengaruhi variabel aslinya. Saat memanggil fungsi, kita cukup mengirimkan variabelnya secara langsung, tanpa perlu operator & atau *, sehingga sintaksnya menjadi lebih bersih dan aman dibandingkan pointer.
 
 ### 3.  Buatlah program yang dapat memberikan input dan output sbb.
-![Screenshot Soal Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan2/OUTPUT/Soal.png)
+![Screenshot Soal Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan2/OUTPUT/soal.png)
 
 ```C++
 #include <iostream>
