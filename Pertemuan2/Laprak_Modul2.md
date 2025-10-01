@@ -412,7 +412,7 @@ int main() {
 ### Penjelasan
 Program ini mendemonstrasikan cara menukar nilai tiga variabel (a, b, c) menggunakan pointer. Fungsi TukarTiga menerima tiga parameter berupa pointer integer (int *). Di dalam fungsi, nilai-nilai dari variabel asli di main diakses dan dimodifikasi menggunakan operator dereferensi *. Penukaran dilakukan secara siklik: nilai a pindah ke b, b ke c, dan c ke a dengan bantuan variabel temp. Saat memanggil fungsi dari main, kita mengirimkan alamat memori dari variabel a, b, dan c menggunakan operator &.
 
-#### Pointer
+#### Reference
 ```C++
 #include <iostream>
 using namespace std;
@@ -450,13 +450,7 @@ int main() {
 
 Program ini melakukan tugas yang sama dengan sebelumnya, yaitu menukar nilai tiga variabel, tetapi kali ini menggunakan reference. Fungsi TukarTiga menerima tiga parameter reference (int &). Artinya, a, b, dan c di dalam fungsi adalah alias langsung dari variabel di main. Setiap perubahan yang dilakukan pada a, b, dan c di dalam fungsi akan langsung memengaruhi variabel aslinya. Saat memanggil fungsi, kita cukup mengirimkan variabelnya secara langsung, tanpa perlu operator & atau *, sehingga sintaksnya menjadi lebih bersih dan aman dibandingkan pointer.
 
-### 3. Diketahui sebuah array 1 dimensi sebagai berikut :
-arrA = {11, 8, 5, 7, 12, 26, 3, 54, 33, 55}
-Buatlah program yang dapat mencari nilai minimum, maksimum, dan rata – rata dari
-array tersebut! Gunakan function cariMinimum() untuk mencari nilai minimum dan
-function cariMaksimum() untuk mencari nilai maksimum, serta gunakan prosedur
-hitungRataRata() untuk menghitung nilai rata – rata! Buat program menggunakan
-menu switch-case seperti berikut ini :
+### 3. Diketahui sebuah array 1 dimensi sebagai berikut : arrA = {11, 8, 5, 7, 12, 26, 3, 54, 33, 55} Buatlah program yang dapat mencari nilai minimum, maksimum, dan rata – rata dari array tersebut! Gunakan function cariMinimum() untuk mencari nilai minimum dan function cariMaksimum() untuk mencari nilai maksimum, serta gunakan prosedur hitungRataRata() untuk menghitung nilai rata – rata! Buat program menggunakan menu switch-case seperti berikut ini :
 ![Screenshot Soal Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan2/OUTPUT/Soal.png)
 
 ```C++
