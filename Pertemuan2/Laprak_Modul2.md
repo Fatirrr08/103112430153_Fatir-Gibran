@@ -97,7 +97,7 @@ int main() {
 
 ### Penjelasan
 
-Program ini mendemonstrasikan penggunaan dasar array satu dimensi di C++. Pertama, sebuah array integer bernama arr dengan kapasitas 10 elemen dideklarasikan. Kemudian, program menggunakan perulangan for untuk meminta pengguna memasukkan 10 nilai, yang masing-masing disimpan ke dalam elemen array dari indeks 0 hingga 9. Setelah semua data terisi, program menggunakan perulangan while untuk menampilkan kembali setiap nilai yang telah disimpan dalam array ke layar, sesuai dengan urutan indeksnya.
+Program ini mendemonstrasikan konsep dasar penggunaan array satu dimensi di C++. Pertama, dideklarasikan sebuah array arr berukuran 10 elemen bertipe integer. Program menggunakan perulangan for untuk meminta pengguna mengisi setiap elemen array dari indeks 0 hingga 9. Setelah proses input selesai, program melanjutkan dengan perulangan while untuk menampilkan kembali semua elemen array yang telah dimasukkan. Setiap iterasi menampilkan nilai dari indeks tertentu beserta nilainya. Program ini memperkenalkan cara dasar menyimpan dan mengakses data dalam array, serta penggunaan dua jenis perulangan berbeda (for dan while) untuk operasi input dan output.
 
 ### 2. Array 2 Dimensi"
 
@@ -157,7 +157,7 @@ int main() {
 
 ### Penjelasan
 
-Program ini menunjukkan operasi penjumlahan dan perkalian matriks menggunakan array dua dimensi berordo 2x2. Dua matriks, arrA dan arrB, diinisialisasi dengan nilai. Untuk penjumlahan, program menggunakan perulangan bersarang untuk menjumlahkan setiap elemen yang bersesuaian dari arrA dan arrB, lalu menyimpannya di arrC. Untuk perkalian, digunakan tiga perulangan bersarang sesuai aturan perkalian matriks, di mana hasil perkalian baris arrA dengan kolom arrB diakumulasikan ke arrD. Terdapat fungsi tampilkanHasil yang dipanggil untuk mencetak matriks hasil ke layar agar kode lebih rapi dan tidak berulang.
+Program ini mengilustrasikan operasi dasar matriks berupa penjumlahan dan perkalian menggunakan array dua dimensi berukuran 2x2. Dua matriks (arrA dan arrB) diinisialisasi secara langsung dengan nilai tertentu. Untuk menghitung penjumlahan, digunakan dua perulangan bersarang (nested loop) yang menambahkan elemen-elemen matriks pada posisi yang sama, lalu menyimpannya ke matriks hasil arrC. Untuk perkalian, digunakan tiga perulangan bersarang yang mengalikan baris dari arrA dengan kolom dari arrB, lalu hasilnya dijumlahkan untuk memperoleh nilai pada matriks hasil arrD. Program ini juga menggunakan fungsi tampilkanHasil untuk menampilkan isi matriks hasil ke layar, agar kode lebih terstruktur dan modular. Konsep yang digunakan meliputi array 2D, loop bersarang, dan pemanggilan fungsi.
 
 ### 3. Pointer
 
@@ -194,7 +194,7 @@ int main() {
 
 ### Penjelasan
 
-Program ini menjelaskan konsep pointer di C++. Sebuah variabel pointer ptr dideklarasikan dan diinisialisasi untuk menyimpan alamat memori dari variabel a (menggunakan operator &). Program kemudian menampilkan nilai a, alamat memori a, isi dari ptr (yang merupakan alamat a), dan nilai yang ditunjuk oleh ptr (menggunakan operator dereferensi *). Selanjutnya, fungsi Tukar dipanggil dengan mengirimkan alamat dari variabel a dan b. Di dalam fungsi Tukar, nilai-nilai pada alamat tersebut ditukar menggunakan variabel sementara temp, yang membuktikan bahwa fungsi dapat mengubah nilai variabel asli di main melalui pointer (pass-by-pointer).
+Program ini memperkenalkan konsep pointer dalam C++. Sebuah variabel pointer ptr dideklarasikan untuk menyimpan alamat memori dari variabel a. Dengan operator &, alamat a disimpan di pointer ptr, dan dengan operator *, nilai yang disimpan di alamat tersebut dapat diakses. Program menampilkan nilai a, alamatnya, isi pointer, serta nilai yang ditunjuk pointer. Selanjutnya, fungsi Tukar digunakan untuk menukar nilai dua variabel menggunakan pointer. Parameter fungsi berupa int *x dan int *y menunjuk langsung ke alamat memori variabel yang dikirimkan. Di dalam fungsi, operator dereferensi digunakan untuk melakukan pertukaran nilai. Program ini memperlihatkan bagaimana pointer dapat digunakan untuk mengubah nilai asli variabel di luar fungsi.
 
 ### 4. Reference
 
@@ -234,7 +234,7 @@ int main() {
 
 ### Penjelasan
 
-Program ini mendemonstrasikan konsep reference sebagai alias atau nama lain untuk sebuah variabel. Sebuah reference ref dideklarasikan dan diinisialisasi ke variabel a. Program menunjukkan bahwa a dan ref memiliki nilai dan alamat memori yang sama persis. Ketika nilai ref diubah menjadi 50, nilai a juga ikut berubah. Ini membuktikan bahwa reference terikat langsung ke variabel aslinya. Selanjutnya, fungsi Tukar yang menerima parameter sebagai reference (pass-by-reference) dipanggil. Karena fungsi bekerja pada reference, ia dapat menukar nilai variabel a dan b secara langsung tanpa perlu menggunakan pointer.
+Program ini menjelaskan penggunaan reference dalam C++, yang berfungsi sebagai alias dari variabel lain. Variabel ref dideklarasikan sebagai reference dari variabel a, sehingga ref dan a menunjuk ke lokasi memori yang sama. Ketika nilai ref diubah, nilai a juga ikut berubah karena keduanya terhubung langsung. Program juga menampilkan alamat dan nilai dari a serta ref untuk menunjukkan kesamaan keduanya. Selanjutnya, program memanggil fungsi Tukar yang menerima parameter pointer untuk menukar nilai a dan b. Melalui contoh ini, program memperlihatkan perbedaan antara penggunaan pointer dan reference, serta bagaimana reference membuat kode menjadi lebih sederhana dan lebih aman dibanding pointer.
 
 ### 5. Function Procedure
 
@@ -286,12 +286,7 @@ Program ini mendemonstrasikan konsep reference sebagai alias atau nama lain untu
 
 ### Penjelasan
 
-Program ini menunjukkan konsep program modular dengan memisahkan tugas ke dalam fungsi dan prosedur.
-
-Fungsi cariMax: Bertipe int, berfungsi mencari nilai maksimum dalam array dan mengembalikan (return) nilai tersebut.
-Prosedur OperasiAritmatika: Bertipe void, bertugas menghitung total penjumlahan dan perkalian semua elemen array, lalu langsung menampilkannya ke layar tanpa mengembalikan nilai.
-
-Di dalam main, program meminta pengguna mengisi 5 elemen array, kemudian memanggil cariMax untuk mendapatkan dan menampilkan nilai tertinggi, serta memanggil OperasiAritmatika untuk melakukan perhitungan dan menampilkan hasilnya.
+Program ini menunjukkan pemrograman modular di C++ dengan penggunaan fungsi dan prosedur. Fungsi cariMax bertipe int dan bertugas mencari nilai maksimum dalam array dengan cara membandingkan setiap elemen menggunakan perulangan for. Prosedur OperasiAritmatika bertipe void dan berfungsi menghitung serta menampilkan total penjumlahan dan total perkalian dari semua elemen array. Di dalam fungsi main, program meminta pengguna untuk menginput 5 nilai array, lalu memanggil cariMax untuk menampilkan nilai maksimum, dan OperasiAritmatika untuk menampilkan hasil operasi aritmetika. Program ini menekankan pentingnya pemisahan tugas dalam fungsi, meningkatkan readability dan reusability program.
 
 ## Unguided 
 
@@ -378,28 +373,27 @@ Semua logika ditempatkan di dalam fungsi main untuk alur program yang sederhana 
 #### Pointer
 ```C++
 #include <iostream>
+
 using namespace std;
 
-void Tukar(int *x, int *y) {
-    int temp = *x;
-    temp = *x;
-    *x = *y;
-    *y = temp;
+void tukarTigaPointer(int *x, int *y, int *z) {
+    int temp = *x; 
+    *x = *y;       
+    *y = *z;       
+    *z = temp;
 }
 
 int main() {
-    int a = 20,b = 30;
-    int *ptr;
-    ptr = &a;
-    
-    
-    cout << "Value of a: " << a << endl;
-    cout << "Address of a: " << &a << endl;
-    cout << "Value stored int ptr (address of a): " << ptr << endl;
-    cout << "Value pointed to by ptr : " << *ptr << endl;
+    int a = 10, b = 20, c = 30;
 
-    Tukar(&a, &b);
-    cout << "After Swaping, Value of a= " << a << " and b=" << b << endl;
+    cout << "--- Nilai Awal (Call by Pointer) ---" << endl;
+    cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
+
+    tukarTigaPointer(&a, &b, &c);
+
+    cout << "\n--- Nilai Setelah Ditukar ---" << endl;
+    cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
+
     return 0;
 }
 ```
@@ -410,33 +404,33 @@ int main() {
 ![Screenshot Output Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan2/OUTPUT/Unguided2a.png)
 
 ### Penjelasan
-Program ini mendemonstrasikan cara menukar nilai tiga variabel (a, b, c) menggunakan pointer. Fungsi TukarTiga menerima tiga parameter berupa pointer integer (int *). Di dalam fungsi, nilai-nilai dari variabel asli di main diakses dan dimodifikasi menggunakan operator dereferensi *. Penukaran dilakukan secara siklik: nilai a pindah ke b, b ke c, dan c ke a dengan bantuan variabel temp. Saat memanggil fungsi dari main, kita mengirimkan alamat memori dari variabel a, b, dan c menggunakan operator &.
+
+Program ini menunjukkan cara menukar nilai tiga variabel (a, b, c) secara siklik menggunakan pointer. Fungsi tukarTigaPointer menerima tiga parameter pointer (int *x, *y, *z), kemudian melakukan proses pertukaran: nilai x disimpan sementara, nilai y dipindahkan ke x, nilai z ke y, dan nilai sementara dikembalikan ke z. Pemanggilan fungsi dilakukan dengan mengirimkan alamat variabel (&a, &b, &c). Karena fungsi bekerja dengan alamat memori, perubahan di dalam fungsi akan langsung memengaruhi nilai variabel asli. Program ini memperlihatkan konsep pass-by-pointer dan manipulasi nilai melalui alamat memori.
 
 #### Reference
 ```C++
 #include <iostream>
+
 using namespace std;
 
-void Tukar(int *x, int *y) {
-    int temp = *x;
-    temp = *x;
-    *x = *y;
-    *y = temp;
+void tukarTigaReferensi(int &x, int &y, int &z) {
+    int temp = x; 
+    x = y;        
+    y = z;        
+    z = temp;
 }
 
 int main() {
-    int a = 20,b = 30;
-    int *ptr;
-    ptr = &a;
-    
-    
-    cout << "Value of a: " << a << endl;
-    cout << "Address of a: " << &a << endl;
-    cout << "Value stored int ptr (address of a): " << ptr << endl;
-    cout << "Value pointed to by ptr : " << *ptr << endl;
+    int a = 10, b = 20, c = 30;
 
-    Tukar(&a, &b);
-    cout << "After Swaping, Value of a= " << a << " and b=" << b << endl;
+    cout << "--- Nilai Awal (Call by Reference) ---" << endl;
+    cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
+
+    tukarTigaReferensi(a, b, c);
+
+    cout << "\n--- Nilai Setelah Ditukar ---" << endl;
+    cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
+
     return 0;
 }
 ```
@@ -448,7 +442,7 @@ int main() {
 
 ### Penjelasan
 
-Program ini melakukan tugas yang sama dengan sebelumnya, yaitu menukar nilai tiga variabel, tetapi kali ini menggunakan reference. Fungsi TukarTiga menerima tiga parameter reference (int &). Artinya, a, b, dan c di dalam fungsi adalah alias langsung dari variabel di main. Setiap perubahan yang dilakukan pada a, b, dan c di dalam fungsi akan langsung memengaruhi variabel aslinya. Saat memanggil fungsi, kita cukup mengirimkan variabelnya secara langsung, tanpa perlu operator & atau *, sehingga sintaksnya menjadi lebih bersih dan aman dibandingkan pointer.
+Program ini memiliki tujuan yang sama seperti versi pointer, tetapi menggunakan reference sebagai parameter. Fungsi tukarTigaReferensi menerima tiga parameter bertipe reference (int &x, &y, &z), lalu menukar nilainya secara langsung karena reference bertindak sebagai alias dari variabel asli. Tidak diperlukan operator dereferensi atau simbol alamat. Pemanggilan fungsi cukup dengan tukarTigaReferensi(a, b, c). Setiap perubahan di dalam fungsi langsung berdampak pada variabel aslinya. Penggunaan reference membuat kode lebih sederhana, aman, dan mudah dibaca dibanding pointer, karena tidak memerlukan manipulasi alamat.
 
 ### 3. Diketahui sebuah array 1 dimensi sebagai berikut : arrA = {11, 8, 5, 7, 12, 26, 3, 54, 33, 55} Buatlah program yang dapat mencari nilai minimum, maksimum, dan rata – rata dari array tersebut! Gunakan function cariMinimum() untuk mencari nilai minimum dan function cariMaksimum() untuk mencari nilai maksimum, serta gunakan prosedur hitungRataRata() untuk menghitung nilai rata – rata! Buat program menggunakan menu switch-case seperti berikut ini :
 ![Screenshot Soal Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan2/OUTPUT/Soal.png)
@@ -542,7 +536,7 @@ int main() {
 
 ### Penjelasan
 
-Program ini merupakan aplikasi analisis data sederhana pada sebuah array yang sudah ditentukan isinya. Program ini sangat modular, di mana setiap tugas spesifik dipecah ke dalam fungsi-fungsinya sendiri: tampilkanArray, cariMaksimum, cariMinimum, dan hitungRataRata. Fungsi main bertugas sebagai pengontrol utama yang menampilkan menu interaktif kepada pengguna. Program menggunakan perulangan do-while agar menu terus ditampilkan setelah sebuah operasi selesai, dan akan berhenti hanya jika pengguna memilih 0. Struktur switch-case digunakan untuk memanggil fungsi yang sesuai berdasarkan input pilihan dari pengguna, membuat alur program menjadi terstruktur dan mudah dibaca.
+Program ini mengimplementasikan analisis sederhana terhadap array satu dimensi yang sudah ditentukan nilainya. Program menggunakan struktur menu interaktif dengan switch-case dan perulangan do-while, sehingga pengguna dapat memilih operasi berulang kali hingga keluar. Fungsi tampilkanArray digunakan untuk menampilkan isi array. Fungsi cariMaksimum mencari nilai terbesar dengan membandingkan tiap elemen, sementara cariMinimum mencari nilai terkecil. Prosedur hitungRataRata menghitung nilai rata-rata dengan menjumlahkan semua elemen dan membaginya dengan jumlah data. Pemisahan fungsi-fungsi ini menunjukkan penerapan pemrograman modular, dan struktur menu membuat program lebih user-friendly serta dinamis.
 
 ## Kesimpulan
 

@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-void Tukar(int *x, int *y) {
-    int temp = *x;
-    temp = *x;
-    *x = *y;
-    *y = temp;
+void Tukar(int x, int y) {
+    int temp = x;
+    temp = x;
+    x = y;
+    y = temp;
 }
 
 int main() {
@@ -22,8 +22,8 @@ int main() {
     cout << "Nilai a: " << &a << endl;
     cout << "Nilai ref: " << ref << endl;
 
-    Tukar(&a, &b);
-    cout << "Setelah Tukar, Nilai a= " << a << " dan b=" << b << endl;
+    Tukar(a, b);
+    cout << "Setelah Tukar, Nilai a= " << a << " dan b =" << b << endl;
     return 0;
 }
 
