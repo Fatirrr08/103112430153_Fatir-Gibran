@@ -10,7 +10,6 @@ Matriks adalah sekumpulan bilangan yang disusun secara teratur dalam baris dan k
 Penjumlahan dan pengurangan matriks hanya dapat dilakukan apabila kedua matriks memiliki ordo yang sama, sedangkan perkalian matriks dilakukan dengan mengalikan baris dari matriks pertama dengan kolom dari matriks kedua.
 
 Dalam pemrograman, matriks direpresentasikan dengan array dua dimensi. Setiap operasi dilakukan dengan menggunakan perulangan bersarang (nested loop) untuk mengakses elemen-elemen matriks berdasarkan indeks baris dan kolomnya. Kompleksitas waktu operasi dasar matriks umumnya adalah:
-
 <br>Penjumlahan/Pengurangan: O(n²)
 <br>Perkalian (klasik): O(n³)
 
