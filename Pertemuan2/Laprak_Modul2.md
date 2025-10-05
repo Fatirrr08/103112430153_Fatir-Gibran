@@ -372,26 +372,29 @@ Semua logika ditempatkan di dalam fungsi main untuk alur program yang sederhana 
 #### Pointer
 ```C++
 #include <iostream>
-
 using namespace std;
 
-void tukarTigaPointer(int *x, int *y, int *z) {
-    int temp = *x; 
-    *x = *y;       
-    *y = *z;       
+void TukarTigaPointer(int *x, int *y, int *z) {
+    int temp = *x;
+    *x = *y;
+    *y = *z;
     *z = temp;
 }
 
 int main() {
     int a = 10, b = 20, c = 30;
 
-    cout << "--- Nilai Awal (Call by Pointer) ---" << endl;
-    cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
+    cout << "--- Sebelum ditukar (Pointer) ---" << endl;
+    cout << "Nilai a: " << a << endl;
+    cout << "Nilai b: " << b << endl;
+    cout << "Nilai c: " << c << endl;
 
-    tukarTigaPointer(&a, &b, &c);
+    TukarTigaPointer(&a, &b, &c);
 
-    cout << "\n--- Nilai Setelah Ditukar ---" << endl;
-    cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
+    cout << "\n--- Setelah ditukar (Pointer) ---" << endl;
+    cout << "Nilai a: " << a << endl;
+    cout << "Nilai b: " << b << endl;
+    cout << "Nilai c: " << c << endl;
 
     return 0;
 }
@@ -404,31 +407,34 @@ int main() {
 
 ### Penjelasan
 
-Program ini menunjukkan cara menukar nilai tiga variabel (a, b, c) secara siklik menggunakan pointer. Fungsi tukarTigaPointer menerima tiga parameter pointer (int *x, *y, *z), kemudian melakukan proses pertukaran: nilai x disimpan sementara, nilai y dipindahkan ke x, nilai z ke y, dan nilai sementara dikembalikan ke z. Pemanggilan fungsi dilakukan dengan mengirimkan alamat variabel (&a, &b, &c). Karena fungsi bekerja dengan alamat memori, perubahan di dalam fungsi akan langsung memengaruhi nilai variabel asli. Program ini memperlihatkan konsep pass-by-pointer dan manipulasi nilai melalui alamat memori.
+Program ini mengimplementasikan penukaran nilai tiga variabel secara siklik (a ke b, b ke c, dan c ke a) menggunakan konsep pass-by-pointer. Fungsi TukarTigaPointer dirancang untuk menerima tiga argumen berupa pointer (int *x, *y, *z), yang menyimpan alamat memori dari variabel lain. Saat dipanggil dari main, program mengirimkan alamat memori dari variabel a, b, dan c menggunakan operator &. Di dalam fungsi, operator dereferensi (*) digunakan untuk mengakses dan memanipulasi nilai asli yang tersimpan di alamat tersebut. Dengan demikian, setiap perubahan yang terjadi di dalam fungsi akan secara langsung memengaruhi nilai variabel di main, yang membuktikan efektivitas pointer untuk modifikasi data lintas lingkup fungsi.
 
 #### Reference
 ```C++
 #include <iostream>
-
 using namespace std;
 
-void tukarTigaReferensi(int &x, int &y, int &z) {
-    int temp = x; 
-    x = y;        
-    y = z;        
+void TukarTigaReference(int &x, int &y, int &z) {
+    int temp = x;
+    x = y;
+    y = z;
     z = temp;
 }
 
 int main() {
-    int a = 10, b = 20, c = 30;
+    int p = 100, q = 200, r = 300;
 
-    cout << "--- Nilai Awal (Call by Reference) ---" << endl;
-    cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
+    cout << "--- Sebelum ditukar (Reference) ---" << endl;
+    cout << "Nilai p: " << p << endl;
+    cout << "Nilai q: " << q << endl;
+    cout << "Nilai r: " << r << endl;
 
-    tukarTigaReferensi(a, b, c);
+    TukarTigaReference(p, q, r);
 
-    cout << "\n--- Nilai Setelah Ditukar ---" << endl;
-    cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
+    cout << "\n--- Setelah ditukar (Reference) ---" << endl;
+    cout << "Nilai p: " << p << endl;
+    cout << "Nilai q: " << q << endl;
+    cout << "Nilai r: " << r << endl;
 
     return 0;
 }
@@ -441,7 +447,8 @@ int main() {
 
 ### Penjelasan
 
-Program ini memiliki tujuan yang sama seperti versi pointer, tetapi menggunakan reference sebagai parameter. Fungsi tukarTigaReferensi menerima tiga parameter bertipe reference (int &x, &y, &z), lalu menukar nilainya secara langsung karena reference bertindak sebagai alias dari variabel asli. Tidak diperlukan operator dereferensi atau simbol alamat. Pemanggilan fungsi cukup dengan tukarTigaReferensi(a, b, c). Setiap perubahan di dalam fungsi langsung berdampak pada variabel aslinya. Penggunaan reference membuat kode lebih sederhana, aman, dan mudah dibaca dibanding pointer, karena tidak memerlukan manipulasi alamat.
+Program ini mendemonstrasikan metode alternatif untuk tujuan yang sama, yaitu penukaran nilai tiga variabel, tetapi dengan menggunakan pass-by-reference. Fungsi TukarTigaReference menerima parameternya sebagai reference (int &x, &y, &z), yang menjadikannya alias atau nama lain untuk variabel p, q, dan r dari fungsi main. Berbeda dengan pointer, pemanggilan fungsi dilakukan secara langsung dengan mengirimkan variabelnya, dan di dalam fungsi tidak diperlukan operator dereferensi (*). Setiap modifikasi terhadap alias (x, y, atau z) secara otomatis mengubah nilai variabel aslinya. Pendekatan ini menunjukkan bagaimana reference menyederhanakan sintaks, meningkatkan keamanan kode, dan membuatnya lebih mudah dibaca dibandingkan dengan manipulasi alamat memori secara manual menggunakan pointer.
+
 
 ### 3. Diketahui sebuah array 1 dimensi sebagai berikut : arrA = {11, 8, 5, 7, 12, 26, 3, 54, 33, 55} Buatlah program yang dapat mencari nilai minimum, maksimum, dan rata – rata dari array tersebut! Gunakan function cariMinimum() untuk mencari nilai minimum dan function cariMaksimum() untuk mencari nilai maksimum, serta gunakan prosedur hitungRataRata() untuk menghitung nilai rata – rata! Buat program menggunakan menu switch-case seperti berikut ini :
 ![Screenshot Soal Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan2/OUTPUT/Soal.png)
