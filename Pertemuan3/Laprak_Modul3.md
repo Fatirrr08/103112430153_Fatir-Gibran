@@ -91,7 +91,7 @@ void tampilan_pelajaran(pelajaran pel){
 }
 ```
 
-### main.cpp
+#### main.cpp
 ```C++
 #include <iostream>
 #include "pelajaran.h"
