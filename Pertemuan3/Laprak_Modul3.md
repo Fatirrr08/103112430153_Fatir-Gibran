@@ -249,7 +249,7 @@ return 0;
 
 #### Contoh output hasil:
 
-![Contoh output hasil](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan3/OUTPUT/Soal2.png)
+![Contoh output hasil](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan3/OUTPUT/hasil.png)
 
 #### pelajar.h
 ```C++
