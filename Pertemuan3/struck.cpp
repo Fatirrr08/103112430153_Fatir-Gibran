@@ -7,6 +7,8 @@ struct mahasiswa{
 };
 
 void input(mahasiswa &mhs){
+        cout<<"Masukkan Nama : ";
+        cin>>mhs.nama;
         cout<<"Masukkan Nilai 1 : "; 
         cin>>mhs.nilai1;
         cout<<"Masukkan Nilai 2 : "; 
