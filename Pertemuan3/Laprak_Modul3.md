@@ -108,7 +108,7 @@ int main(){
 ```
 ##### Output Guided 2
 
-![Screenshot Output guided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan3/OUTPUT/Guided2.png)
+![Screenshot Output guided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan3/OUTPUT/Guided2.png)
 
 ### Penjelasan
 
@@ -220,7 +220,7 @@ int main() {
 
 ##### Output 
 
-![Screenshot Output Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan3/OUTPUT/Unguided1.png)
+![Screenshot Output Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan3/OUTPUT/Unguided1.png)
 
 ### Penjelasan
 
@@ -306,7 +306,7 @@ int main(){
 
 ##### Output 
 
-![Screenshot Output Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan3/OUTPUT/Unguided2.png)
+![Screenshot Output Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan3/OUTPUT/Unguided2.png)
 
 ### Penjelasan
 Program ini bertujuan untuk memperkuat pemahaman tentang ADT dengan mengimplementasikan ulang ADT pelajaran. Seperti pada contoh guided, program dibagi menjadi tiga file: pelajar.h sebagai antarmuka yang berisi definisi struct dan deklarasi fungsi, pelajar.cpp sebagai file implementasi yang berisi kode rinci dari fungsi create_pelajaran dan tampilan_pelajaran, serta main.cpp sebagai program utama yang menggunakan ADT tersebut untuk membuat dan menampilkan data satu mata pelajaran.
@@ -431,7 +431,7 @@ int main() {
 
 ##### Output 
 
-![Screenshot Output Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan3/OUTPUT/Unguided3.png)
+![Screenshot Output Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan3/OUTPUT/Unguided2.png)
 
 ### Penjelasan
 
