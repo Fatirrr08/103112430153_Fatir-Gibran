@@ -444,17 +444,17 @@ Pada praktikum Modul 3 ini, konsep Abstract Data Type (ADT) telah berhasil dipel
 
 ## Referensi
 
-[1]GeeksforGeeks. (2023). Abstract Data Types. [Online]. Tersedia di: https://www.geeksforgeeks.org/abstract-data-types/
-<br>[2]TutorialsPoint. (2023). C++ Structures. [Online]. Tersedia di: https://www.tutorialspoint.com/cplusplus/cpp_structures.htm
-<br>[3]Learn C++. (2023). 10.2 — Header files. [Online]. Tersedia di: https://www.learncpp.com/cpp-tutorial/header-files/
-<br>[4]Programiz. (2023). C++ Pointers. [Online]. Tersedia di: https://www.programiz.com/cpp-programming/pointers
-<br>[5]W3Schools. (2023). C++ Functions. [Online]. Tersedia di: https://www.w3schools.com/cpp/cpp_functions.asp
-<br>[6]GeeksforGeeks. (2023). C++ Arrays. [Online]. Tersedia di: https://www.geeksforgeeks.org/cpp-arrays/
-<br>[7]CPlusPlus.com. (2023). Pointers - C++ Tutorials. [Online]. Tersedia di: https://cplusplus.com/doc/tutorial/pointers/
-<br>[8]Stack Overflow. (2012). Why should I use a header file? [Online]. Tersedia di: https://stackoverflow.com/questions/333831/why-should-i-use-a-header-file
-<br>[9]GeeksforGeeks. (2023). Pass by Reference in C++. [Online]. Tersedia di: https://www.geeksforgeeks.org/pass-by-reference-in-cpp/
-<br>[10]Programiz. (2023). C++ Arrays Passed to a Function. [Online]. Tersedia di: https://www.programiz.com/cpp-programming/passing-arrays-function
-<br>[11]Learn C++. (2023). 1.5 — Introduction to structs, members, and member selection. [Online]. Tersedia di: https://www.learncpp.com/cpp-tutorial/introduction-to-structs-members-and-member-selection/
-<br>[12]CPlusPlus.com. (2023). Multidimensional arrays - C++ Tutorials. [Online]. Tersedia di: https://cplusplus.com/doc/tutorial/arrays/
-<br>[13]Educative. (2023). What Is Encapsulation in C++? [Online]. Tersedia di: https://www.educative.io/blog/what-is-encapsulation-in-cpp
-<br>[14]GeeksforGeeks. (2023). Header Files in C/C++. [Online]. Tersedia di: https://www.geeksforgeeks.org/header-files-in-c-cpp/
+[1] GeeksforGeeks. (2023). Abstract Data Types. [Online]. Tersedia di: https://www.geeksforgeeks.org/abstract-data-types/
+<br>[2] TutorialsPoint. (2023). C++ Structures. [Online]. Tersedia di: https://www.tutorialspoint.com/cplusplus/cpp_structures.htm
+<br>[3] Learn C++. (2023). 10.2 — Header files. [Online]. Tersedia di: https://www.learncpp.com/cpp-tutorial/header-files/
+<br>[4] Programiz. (2023). C++ Pointers. [Online]. Tersedia di: https://www.programiz.com/cpp-programming/pointers
+<br>[5] W3Schools. (2023). C++ Functions. [Online]. Tersedia di: https://www.w3schools.com/cpp/cpp_functions.asp
+<br>[6] GeeksforGeeks. (2023). C++ Arrays. [Online]. Tersedia di: https://www.geeksforgeeks.org/cpp-arrays/
+<br>[7] CPlusPlus.com. (2023). Pointers - C++ Tutorials. [Online]. Tersedia di: https://cplusplus.com/doc/tutorial/pointers/
+<br>[8] Stack Overflow. (2012). Why should I use a header file? [Online]. Tersedia di: https://stackoverflow.com/questions/333831/why-should-i-use-a-header-file
+<br>[9] GeeksforGeeks. (2023). Pass by Reference in C++. [Online]. Tersedia di: https://www.geeksforgeeks.org/pass-by-reference-in-cpp/
+<br>[10] Programiz. (2023). C++ Arrays Passed to a Function. [Online]. Tersedia di: https://www.programiz.com/cpp-programming/passing-arrays-function
+<br>[11] Learn C++. (2023). 1.5 — Introduction to structs, members, and member selection. [Online]. Tersedia di: https://www.learncpp.com/cpp-tutorial/introduction-to-structs-members-and-member-selection/
+<br>[12] CPlusPlus.com. (2023). Multidimensional arrays - C++ Tutorials. [Online]. Tersedia di: https://cplusplus.com/doc/tutorial/arrays/
+<br>[13] Educative. (2023). What Is Encapsulation in C++? [Online]. Tersedia di: https://www.educative.io/blog/what-is-encapsulation-in-cpp
+<br>[14] GeeksforGeeks. (2023). Header Files in C/C++. [Online]. Tersedia di: https://www.geeksforgeeks.org/header-files-in-c-cpp/
