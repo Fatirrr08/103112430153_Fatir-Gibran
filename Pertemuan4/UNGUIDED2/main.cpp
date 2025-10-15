@@ -9,7 +9,7 @@ int main() {
     insertLast(L, alokasi(2));
     insertAfter(L.first, alokasi(12));
 
-    cout << "Isi Linked List awal: ";
+    cout << "Linked List awal: ";
     printInfo(L);
 
     deleteFirst(L);
@@ -18,7 +18,7 @@ int main() {
 
     deleteAfter(L.first);
 
-    cout << "\nIsi Linked List setelah penghapusan: ";
+    cout << "\nLinked List setelah penghapusan: ";
     printInfo(L);
 
     cout << "\nJumlah node : " << nbList(L) << endl;
