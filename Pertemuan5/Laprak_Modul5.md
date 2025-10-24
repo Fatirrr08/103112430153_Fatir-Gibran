@@ -810,7 +810,7 @@ int main() {
 Pada Unguided 2, program dikembangkan dengan menambahkan fitur update dan search pada struktur ListAngka. Fungsi updateFirst, updateLast, dan updateAfter digunakan untuk mengubah data node pertama, terakhir, atau node setelah node tertentu. Sedangkan searchByData, searchByAddress, dan searchByRange digunakan untuk mencari data berdasarkan isi node, alamat memori node, dan nilai minimum tertentu. Implementasi di ListAngka.cpp menggunakan traversal pointer yang dimulai dari node pertama (L.first) dan berlanjut hingga akhir (NULL). Pada main.cpp, setelah data dimasukkan ke list, program melakukan beberapa update nilai seperti mengganti 40 menjadi 50 dan 33 menjadi 45. Selanjutnya, dilakukan pencarian nilai 20 dan 55, serta pencarian berdasarkan alamat node dan range nilai ≥ 40. Hasilnya ditampilkan untuk menunjukkan kemampuan program dalam menavigasi dan memodifikasi data menggunakan pointer.
 
 ### 3. Lakukanlah operasi aritmetika penjumlahan, pengurangan, dan perkalian terhadap semua data yang ada didalam list tersebut! Untuk penjumlahan nilai awal adalah 0, untuk pengurangan nilai awal adalah nilai node pertama (first), untuk perkalian nilai awal adalah 1.Output yang diharapkan :
-![Screenshot Soal Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan5/OUTPUT/Soal2.png) 
+![Screenshot Soal Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan5/OUTPUT/Soal3.png) 
 
 #### ListAngka.h
 ```C++
