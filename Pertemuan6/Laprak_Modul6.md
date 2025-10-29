@@ -293,7 +293,7 @@ int main(){
     return 0;
 }
 ```
-##### Output Guided 1
+### Output Guided 1
 
 ![Screenshot Output guided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan6/OUTPUT/Guided1.png)
 
@@ -807,7 +807,7 @@ int main(){
     return 0;
 }
 ```
-##### Output Guided 2
+### Output Guided 2
 ![Screenshot Output guided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan6/OUTPUT/Guided2.png)
 
 ### Penjelasan
@@ -1133,7 +1133,7 @@ int main() {
 }
 ```
 
-##### Output Unguided 2
+### Output Unguided 2
 
 ![Screenshot Output Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan6/OUTPUT/Unguided2.png)
 
@@ -1359,7 +1359,7 @@ int main() {
 }
 ```
 
-##### Output Unguided 3
+### Output Unguided 3
 
 ![Screenshot Output Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan6/OUTPUT/Unguided3.png)
 
