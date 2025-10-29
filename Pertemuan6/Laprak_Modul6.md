@@ -12,7 +12,7 @@ Doubly Linked List umumnya digunakan dalam aplikasi yang membutuhkan navigasi du
 
 ### 1. Doubly Linked List Makanan
 
-#### listmakanan.h
+#### Listmakanan.h
 ```C++
 #ifndef LISTMAKANAN_H
 #define LISTMAKANAN_H
