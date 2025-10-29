@@ -755,7 +755,7 @@ void deleteByName(linkedlist &List, string nama){
 
 #### main.cpp
 ```C++
-	#include "listMakanan.h"
+#include "listMakanan.h"
 #include <iostream>
 
 using namespace std;
@@ -961,14 +961,11 @@ int main() {
 
 ### Output Unguided 1 :
 
-Program ini mengimplementasikan ADT Doubly Linked List untuk mengelola data kendaraan dengan field nomor polisi, warna, dan tahun pembuatan. Implementasi mencakup fungsi dasar seperti createList, alokasi, dealokasi, insertFirst, findElm, dan printInfo. Program mampu mendeteksi duplikasi nomor polisi saat input data dan menampilkan semua data kendaraan yang tersimpan. Struktur Doubly Linked List dipilih karena memungkinkan operasi yang fleksibel dan efisien untuk manajemen data kendaraan.
-
-##### Output 
-
 ![Screenshot Output Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan6/OUTPUT/Unguided1.png)
 
 ### Penjelasan
 
+Program ini mengimplementasikan ADT Doubly Linked List untuk mengelola data kendaraan dengan field nomor polisi, warna, dan tahun pembuatan. Implementasi mencakup fungsi dasar seperti createList, alokasi, dealokasi, insertFirst, findElm, dan printInfo. Program mampu mendeteksi duplikasi nomor polisi saat input data dan menampilkan semua data kendaraan yang tersimpan. Struktur Doubly Linked List dipilih karena memungkinkan operasi yang fleksibel dan efisien untuk manajemen data kendaraan.
 
 ### 2. Carilah elemen dengan nomor polisi D001 dengan membuat fungsi baru.fungsi findElm( L : List, x : infotype ) : address
 
@@ -1136,7 +1133,7 @@ int main() {
 }
 ```
 
-##### Output 
+##### Output Unguided 2
 
 ![Screenshot Output Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan6/OUTPUT/Unguided2.png)
 
@@ -1362,7 +1359,7 @@ int main() {
 }
 ```
 
-##### Output 
+##### Output Unguided 3
 
 ![Screenshot Output Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan6/OUTPUT/Unguided3.png)
 
