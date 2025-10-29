@@ -293,11 +293,11 @@ int main(){
     return 0;
 }
 ```
-### Output Guided 1
+#### Output Guided 1
 
 ![Screenshot Output guided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan6/OUTPUT/Guided1.png)
 
-### Penjelasan
+#### Penjelasan
 
 Program ini mengimplementasikan Doubly Linked List untuk mengelola data makanan dengan operasi dasar seperti insert (first, last, after, before), update (first, last, after, before), dan display. Setiap node menyimpan informasi makanan berupa nama, jenis, harga, dan rating. Program mendemonstrasikan bagaimana melakukan penyisipan node pada berbagai posisi dalam list dan melakukan update data pada node yang sudah ada. Struktur data ini memungkinkan traversal dua arah yang memudahkan operasi insert before dan update before dengan mengakses pointer prev.
 
@@ -807,10 +807,10 @@ int main(){
     return 0;
 }
 ```
-### Output Guided 2
+#### Output Guided 2
 ![Screenshot Output guided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan6/OUTPUT/Guided2.png)
 
-### Penjelasan
+#### Penjelasan
 
 Program ini merupakan pengembangan dari Guided 1 dengan menambahkan fungsi-fungsi advanced seperti searching (berdasarkan nama, jenis, dan rating minimum) dan deletion (first, last, after, before, by name). Program menunjukkan bagaimana melakukan pencarian data berdasarkan kriteria tertentu dan menghapus node dari berbagai posisi dalam list. Implementasi delete yang komprehensif ini memanfaatkan keunggulan Doubly Linked List dalam mengakses node sebelumnya dan berikutnya secara efisien, memastikan integritas pointer terjaga selama proses penghapusan.
 
@@ -959,11 +959,11 @@ int main() {
 }
 ```
 
-### Output Unguided 1
+#### Output Unguided 1
 
 ![Screenshot Output Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan6/OUTPUT/Unguided1.png)
 
-### Penjelasan
+#### Penjelasan
 
 Program ini mengimplementasikan ADT Doubly Linked List untuk mengelola data kendaraan dengan field nomor polisi, warna, dan tahun pembuatan. Implementasi mencakup fungsi dasar seperti createList, alokasi, dealokasi, insertFirst, findElm, dan printInfo. Program mampu mendeteksi duplikasi nomor polisi saat input data dan menampilkan semua data kendaraan yang tersimpan. Struktur Doubly Linked List dipilih karena memungkinkan operasi yang fleksibel dan efisien untuk manajemen data kendaraan.
 
@@ -1133,11 +1133,11 @@ int main() {
 }
 ```
 
-### Output Unguided 2
+#### Output Unguided 2
 
 ![Screenshot Output Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan6/OUTPUT/Unguided2.png)
 
-### Penjelasan
+#### Penjelasan
 
 Program ini mengembangkan implementasi sebelumnya dengan menambahkan fungsi pencarian (searching) berdasarkan nomor polisi. Fungsi findElm melakukan traversal linear melalui list untuk menemukan kendaraan dengan nomor polisi tertentu. Program menunjukkan bagaimana melakukan pencarian data dan menampilkan informasi lengkap kendaraan yang ditemukan. Implementasi ini memanfaatkan kemampuan traversal Doubly Linked List meskipun untuk pencarian linear, kompleksitas waktu tetap O(n) seperti pada Singly Linked List.
 
@@ -1359,11 +1359,11 @@ int main() {
 }
 ```
 
-### Output Unguided 3
+#### Output Unguided 3
 
 ![Screenshot Output Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan6/OUTPUT/Unguided3.png)
 
-### Penjelasan
+#### Penjelasan
 
 Program ini melengkapi implementasi Doubly Linked List dengan menambahkan operasi penghapusan (deletion) yang komprehensif, termasuk deleteFirst, deleteLast, deleteAfter, dan integrasinya dengan fungsi findElm untuk menghapus berdasarkan nomor polisi. Program mendemonstrasikan bagaimana menghandle tiga skenario penghapusan: node pertama, node terakhir, dan node di tengah list. Keunggulan Doubly Linked List terlihat dalam kemudahan mengupdate pointer prev dan next selama proses penghapusan, memastikan integritas struktur data terjaga.
 
@@ -1377,7 +1377,7 @@ Implementasi Doubly Linked List dalam mengelola data kendaraan menunjukkan bagai
 
 [1] Kadir, A. (2014). Pemrograman C++: Membuat Aplikasi dengan C++. Andi Publisher.
 <br>[2] Santoso, H. B. (2019). Struktur Data dan Algoritma: Teori dan Implementasi dalam C++. Deepublish.
-<br>[3] Kurniawan, B. (2017). Pemrograman C++ untuk Pemula hingga Mahir. Elex Media Komputindo.    
+<br>[3] Kurniawan, B. (2017). Pemrograman C++ untuk Pemula hingga Mahir. Elex Media Komputindo.
 <br>[4] Sedgewick, Robert & Wayne, Kevin. Algorithms, 4th Edition. Pearson, 2011.
 <br>[5] Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to Algorithms (3rd ed.). MIT Press.
 <br>[6] Goodrich, M. T., Tamassia, R., & Mount, D. M. (2011). Data Structures and Algorithms in C++. John Wiley & Sons.
