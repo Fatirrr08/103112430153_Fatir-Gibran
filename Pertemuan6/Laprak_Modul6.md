@@ -959,7 +959,7 @@ int main() {
 }
 ```
 
-### Output Unguided 1 :
+### Output Unguided 1
 
 ![Screenshot Output Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan6/OUTPUT/Unguided1.png)
 
@@ -1289,7 +1289,7 @@ void deleteAfter(address Prec, address &P) {
 }
 ```
 
-### main.cpp
+#### main.cpp
 ```C++
 #include "Doublylist.h"
 using namespace std;
