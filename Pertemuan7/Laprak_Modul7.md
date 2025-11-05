@@ -26,7 +26,7 @@ Stack dapat diimplementasikan dalam dua representasi utama, masing-masing memili
 
 ### 1. Implementasi Stack dengan Representasi Pointer (Linked List)
 
-#### Liststack.h
+#### Stack.h
 ```C++
 #ifndef STACK
 #define STACK
@@ -429,7 +429,7 @@ Guided 2 mengimplementasikan ADT Stack menggunakan Array (tabel). Dalam represen
 ![Screenshot Soal Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan7/OUTPUT/Soal1.png)
 ### Buatlah implementasi ADT Stack menggunakan Array pada file “stack.cpp” dan “main.cpp”
 
-#### stack.h
+#### Stack.h
 ```C++
 #ifndef STACK_H_INCLUDED
 #define STACK_H_INCLUDED
@@ -560,7 +560,7 @@ Bagian Unguided 1 merupakan implementasi dasar ADT Stack menggunakan representas
 
 ![Screenshot Soal Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan7/OUTPUT/Soal2.png) 
 
-#### stack.h
+#### Stack.h
 ```C++
 #ifndef STACK_H_INCLUDED
 #define STACK_H_INCLUDED
@@ -711,7 +711,7 @@ Soal Unguided 2 menambahkan prosedur khusus PushAscending, yang menyisipkan elem
 ### 3.  Hapus elemen dengan nomor polisi D003 dengan procedure delete.
 ![Screenshot Soal Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan7/OUTPUT/Soal3.png) 
 
-#### stack.h
+#### Stack.h
 ```C++
 #ifndef STACK_H_INCLUDED
 #define STACK_H_INCLUDED
@@ -861,7 +861,6 @@ Stack adalah struktur data LIFO (Last In First Out) yang mendefinisikan akses da
 [1] Lipschutz, S. (2017). Schaum's Outline of Data Structures with C++. New York: McGraw-Hill Education.
 <br>[2] Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to Algorithms (3rd ed.). Cambridge, MA: MIT Press.
 <br>[3] Carrano, F. M., & Henry, P. L. (2020). Data Structures and Abstractions with C++ (5th ed.). Hoboken, NJ: Pearson.
-<br>[4] GeeksforGeeks. (n.d.). Stack Data Structure. Diperoleh dari [Masukkan URL spesifik yang Anda gunakan, misal: https://www.geeksforgeeks.org/stack-data-structure/].
-<br>[5] Wirth, N. (1976). Algorithms + Data Structures = Programs. Prentice Hall. (Klasik dalam ilmu komputer yang membahas Stack secara fundamental).
-<br>[6] Knuth, D. E. (1997). The Art of Computer Programming, Volume 1: Fundamental Algorithms (3rd ed.). Addison-Wesley Professional.
-<br>[7] Goodrich, M. T., & Tamassia, R. (2014). Data Structures and Algorithms in C++ (2nd ed.). Wiley.
+<br>[4] Wirth, N. (1976). Algorithms + Data Structures = Programs. Prentice Hall. (Klasik dalam ilmu komputer yang membahas Stack secara fundamental).
+<br>[5] Knuth, D. E. (1997). The Art of Computer Programming, Volume 1: Fundamental Algorithms (3rd ed.). Addison-Wesley Professional.
+<br>[6] Goodrich, M. T., & Tamassia, R. (2014). Data Structures and Algorithms in C++ (2nd ed.). Wiley.
