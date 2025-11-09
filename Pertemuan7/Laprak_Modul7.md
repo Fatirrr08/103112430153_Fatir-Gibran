@@ -522,28 +522,57 @@ void BalikStack(Stack &S) {
 
 using namespace std;
 
-int main() {
-    cout << "Hello world!" << endl;
-    Stack S;
-    CreateStack(S);
+void CreateStack(Stack &S) {
+    S.top = 0; 
+}
 
-    Push(S, 3);
-    Push(S, 4);
-    Push(S, 8);
-    Pop(S);      
-    Push(S, 2);  
-    Push(S, 3);  
-    Pop(S);      
-    Push(S, 9);  
-    
-    PrintInfo(S); 
+int IsEmpty(Stack S) {
+    return S.top == 0;
+}
 
-    cout << "balik stack" << endl;
-    BalikStack(S);
-    
-    PrintInfo(S); 
-    
-    return 0;
+void Push(Stack &S, infotype X) {
+    if (S.top < MaxEl) { 
+        S.top++; 
+        S.info[S.top] = X; 
+    } else {
+        cout << "Stack Penuh, Push gagal!" << endl;
+    }
+}
+
+infotype Pop(Stack &S) {
+    infotype X = 0; 
+    if (!IsEmpty(S)) {
+        X = S.info[S.top]; 
+        S.top--;           
+    } 
+    return X; 
+}
+
+void PrintInfo(Stack S) {
+    if (!IsEmpty(S)) {
+        cout << "[TOP] ";
+        for (int i = S.top; i >= 1; i--) { 
+            cout << S.info[i] << " ";
+        }
+        cout << endl;
+    } else {
+        cout << "Stack Kosong" << endl;
+    }
+}
+
+void BalikStack(Stack &S) {
+    int i = 1;  
+    int j = S.top;  
+    infotype temp;
+
+    while (i < j) {
+        temp = S.info[i];
+        S.info[i] = S.info[j];
+        S.info[j] = temp;
+
+        i++;
+        j--;
+    }
 }
 ```
 

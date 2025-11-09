@@ -42,14 +42,16 @@ void PrintInfo(Stack S) {
 }
 
 void BalikStack(Stack &S) {
-    Stack Temp; 
-    CreateStack(Temp);
+    int i = 1;  
+    int j = S.top;  
+    infotype temp;
 
-    while (!IsEmpty(S)) {
-        Push(Temp, Pop(S));
-    }
+    while (i < j) {
+        temp = S.info[i];
+        S.info[i] = S.info[j];
+        S.info[j] = temp;
 
-    while (!IsEmpty(Temp)) {
-        Push(S, Pop(Temp));
+        i++;
+        j--;
     }
 }
