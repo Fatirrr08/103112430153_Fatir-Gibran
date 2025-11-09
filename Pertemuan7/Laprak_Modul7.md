@@ -234,7 +234,7 @@ int main(){
 ```
 #### Output Guided 1
 
-![Screenshot Output guided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan7/OUTPUT/Guided1.png)
+![Screenshot Output guided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan7/OUTPUT/Guided1.png)
 
 #### Penjelasan
 
@@ -416,7 +416,7 @@ int main(){
 }
 ```
 #### Output Guided 2
-![Screenshot Output guided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan7/OUTPUT/Guided2.png)
+![Screenshot Output guided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan7/OUTPUT/Guided2.png)
 
 #### Penjelasan
 
@@ -426,7 +426,7 @@ Guided 2 mengimplementasikan ADT Stack menggunakan Array (tabel). Dalam represen
 
 ### 1. Buatlah ADT Stack menggunakan ARRAY sebagai berikut di dalam file “stack.h”:
   
-![Screenshot Soal Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan7/OUTPUT/Soal1.png)
+![Screenshot Soal Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan7/OUTPUT/Soal1.png)
 ### Buatlah implementasi ADT Stack menggunakan Array pada file “stack.cpp” dan “main.cpp”
 
 #### Stack.h
@@ -579,7 +579,7 @@ void BalikStack(Stack &S) {
 #### Output Unguided 1
 
 
-![Screenshot Output Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan7/OUTPUT/Unguided1.png)
+![Screenshot Output Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan7/OUTPUT/Unguided1.png)
 
 #### Penjelasan
 
@@ -587,7 +587,7 @@ Bagian Unguided 1 merupakan implementasi dasar ADT Stack menggunakan representas
 
 ### 2.  Tambahkan prosedur pushAscending( in/out S : Stack, in x : integer)
 
-![Screenshot Soal Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan7/OUTPUT/Soal2.png) 
+![Screenshot Soal Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan7/OUTPUT/Soal2.png) 
 
 #### Stack.h
 ```C++
@@ -731,14 +731,14 @@ int main() {
 
 #### Output Unguided 2
 
-![Screenshot Output Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan7/OUTPUT/Unguided2.png)
+![Screenshot Output Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan7/OUTPUT/Unguided2.png)
 
 #### Penjelasan
 
 Soal Unguided 2 menambahkan prosedur khusus PushAscending, yang menyisipkan elemen baru X sambil menjaga urutan data dalam Stack tetap menaik (ascending). Karena Stack hanya mengizinkan akses dari TOP, prosedur ini menggunakan Stack sementara (Temp) untuk menahan sementara semua elemen yang lebih besar dari X. Setelah elemen X disisipkan di posisi yang benar, elemen yang ditahan di Stack Temp dikembalikan ke Stack utama, sehingga urutan tetap terjaga.
 
 ### 3.  Hapus elemen dengan nomor polisi D003 dengan procedure delete.
-![Screenshot Soal Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan7/OUTPUT/Soal3.png) 
+![Screenshot Soal Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan7/OUTPUT/Soal3.png) 
 
 #### Stack.h
 ```C++
@@ -875,7 +875,7 @@ int main() {
 
 #### Output Unguided 3
 
-![Screenshot Output Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/pertemuan7/OUTPUT/Unguided3.png)
+![Screenshot Output Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan7/OUTPUT/Unguided3.png)
 
 #### Penjelasan
 
