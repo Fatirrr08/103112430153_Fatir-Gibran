@@ -5,13 +5,13 @@
 
 Queue (Antrean) adalah struktur data linier yang mengikuti prinsip FIFO (First-In, First-Out). Artinya, elemen data yang pertama kali dimasukkan (First-In) akan menjadi elemen yang pertama kali dikeluarkan (First-Out). Ini dapat diumpamakan seperti antrean di loket tiket, di mana orang yang pertama datang akan dilayani terlebih dahulu.
 
-### Operasi dasar pada Queue adalah:
+#### Operasi dasar pada Queue adalah
 
 Enqueue (Insert): Proses untuk menambahkan elemen baru ke dalam antrean. Elemen baru selalu ditambahkan di posisi akhir (belakang) antrean, yang biasa disebut Tail.
 
 Dequeue (Delete): Proses untuk menghapus atau mengambil elemen dari antrean. Elemen selalu diambil dari posisi paling depan antrean, yang biasa disebut Head.
 
-### Implementasi Queue dapat dilakukan dengan dua cara utama:
+#### Implementasi Queue dapat dilakukan dengan dua cara utama
 
 Linked List (Senarai Berantai): Seperti pada Guided 1, implementasi ini menggunakan pointer. Head adalah pointer ke elemen pertama dan Tail adalah pointer ke elemen terakhir. Keuntungannya adalah ukuran antrean yang dinamis dan tidak terbatas (tergantung memori).
 
