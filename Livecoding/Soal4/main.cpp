@@ -7,7 +7,7 @@ int main() {
     createQueue(Q);
     int pilihan;
     
-    cout << "====== SISTEM ANTRIAN PAKET EKSPEDISI KOMANIYA EXPRESS ======" << endl << endl;
+    cout << "====== SISTEM ANTRIAN PAKET EKSPEDISI ======" << endl << endl;
     
     while (true) {
         cout << "Menu Utama:" << endl;
