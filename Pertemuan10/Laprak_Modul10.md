@@ -445,7 +445,7 @@ int main() {
 ```
 #### Output Guided 1
 
-![Screenshot Output guided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan8/OUTPUT/Guided1.png)
+![Screenshot Output guided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan10/OUTPUT/Guided1.png)
 
 #### Penjelasan
 
@@ -455,9 +455,7 @@ Guided 1 mengimplementasikan ADT Binary Search Tree secara lengkap mencakup mana
 
 ### 1. Buatlah ADT Binary Search Tree menggunakan Linked list sebagai berikut di dalam file
   
-![Screenshot Soal Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan8/OUTPUT/Soal1.png)
-
-### Buatlah implementasi ADT Queue pada file “bst.cpp” dengan menerapkan mekanisme queue Alternatif 1 (head diam, tail bergerak).
+![Screenshot Soal Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan10/OUTPUT/Soal1.png)
 
 #### bst.h
 ```C++
@@ -577,14 +575,14 @@ int main() {
 
 #### Output Unguided 1
 
-![Screenshot Output Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan8/OUTPUT/Unguided1.png)
+![Screenshot Output Unguided 1](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan10/OUTPUT/Unguided1.png)
 
 #### Penjelasan
 
 Unguided 1 membangun versi minimal ADT BST berbasis pointer menggunakan Linked Node Structure untuk menyimpan elemen pohon di heap. Struktur Node menyimpan info (integer) dan pointer left/right sebagai children. Fungsi alokasi membuat simpul baru dengan operator new, mengisi data input, dan menginisialisasi children ke NULL. insertNode didefinisikan rekursif: jika subtree kosong (NULL) node baru disisipkan, jika nilai input lebih kecil menuruni subtree kiri, jika lebih besar menuruni subtree kanan, dan duplicate input diabaikan agar aturan BST tidak dilanggar. Fungsi pencarian findNode bekerja secara rekursif, menuruni jalur kiri/kanan sampai data ditemukan atau pointer mencapai NULL sebagai kondisi berhenti, lalu mengembalikan address node yang dicari. Traversal yang diimplementasikan printInorder menggunakan DFS kiri–root–kanan, yang dalam BST akan mencetak node dalam keadaan terurut, menjadi bukti bahwa proses insert sudah menempatkan node sesuai aturan binary search property. File main.cpp berperan sebagai driver untuk menguji ADT, mulai dari inisialisasi root = NULL, memanggil insertNode dengan deret data tertentu, lalu mencetak hasil inorder dan menguji keberhasilan findNode, sehingga praktikan dapat memverifikasi bahwa ADT dasar BST berjalan benar pada dynamic memory dan recursion logic.
 
 ### 2. Buatlah fungsi untuk menghitung jumlah node dengan fungsi berikut
-![Screenshot Soal Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan8/OUTPUT/Soal2.png)
+![Screenshot Soal Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan10/OUTPUT/Soal2.png)
 
 #### bst.h
 ```C++
@@ -720,14 +718,14 @@ int main() {
 
 #### Output Unguided 2
 
-![Screenshot Output Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan8/OUTPUT/Unguided2.png)
+![Screenshot Output Unguided 2](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan10/OUTPUT/Unguided2.png)
 
 #### Penjelasan
 
 Ungguided 2 melanjutkan implementasi ADT BST dengan menambahkan fungsi-fungsi properti pohon melalui pendekatan DFS menyeluruh. Fungsi hitungJumlahNode dibuat rekursif untuk menghitung total semua simpul di tree dengan logika 1 + kiri + kanan sampai seluruh subtree habis, menjadi implementasi Full Tree DFS Count, dan mengembalikan 0 jika pointer NULL sebagai basis berhenti. hitungTotalInfo menjumlahkan nilai yang disimpan pada setiap simpul (root->info + kiri + kanan) secara rekursif sehingga menghasilkan total akumulasi data numerik yang ada pada tree. Fungsi kedalaman maksimal dihitung oleh hitungKedalaman dengan menurun ke subtree kiri dan kanan, memilih nilai terbesar di antara keduanya using helper max, lalu ditambah 1 untuk merepresentasikan level tree dari branch terpanjang, sehingga memberikan kedalaman terdalam dari root. File main.cpp dipakai sebagai driver test case untuk memasukkan node tertentu, mencetak traversal inorder sebagai validasi ordering, lalu memanggil fungsi jumlah node, kedalaman, dan total info, sehingga praktikan dapat memverifikasi properti tree hasil insert, memahami cara kerja rekursi pada branch depth dan akumulasi node count, sekaligus memastikan hasil operasi sesuai ilustrasi tree tanpa terjadi memory fault pada dynamic nodes.
 
 ### 3. Print tree secara pre-order dan post-order.
-![Screenshot Soal Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan8/OUTPUT/Soal3.png)
+![Screenshot Soal Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan10/OUTPUT/Soal3.png)
 
 #### bst.h
 ```C++
@@ -855,7 +853,7 @@ int main() {
 
 #### Output Unguided 3
 
-![Screenshot Output Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan8/OUTPUT/Unguided3.png)
+![Screenshot Output Unguided 3](https://github.com/Fatirrr08/103112430153_Fatir-Gibran/blob/master/Pertemuan10/OUTPUT/Unguided3.png)
 
 #### Penjelasan
 
