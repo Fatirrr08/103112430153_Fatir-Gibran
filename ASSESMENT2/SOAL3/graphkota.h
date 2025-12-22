@@ -10,7 +10,7 @@ typedef struct ElmKota *adrKota;
 typedef struct ElmEdge *adrEdge;
 
 struct ElmEdge {
-    adrKota tujuan;
+    adrKota kotaTujuan;
     int jarak;
     adrEdge next;
 };
@@ -32,8 +32,10 @@ adrEdge alokasiEdge(adrKota tujuan, int jarak);
 void insertNode(GraphKota &G, adrKota P);
 adrKota findNode(GraphKota G, string nama);
 void connectNode(GraphKota &G, string A, string B, int jarak);
+void disconnectNode(GraphKota &G, string A, string B);
 void deleteNode(GraphKota &G, string nama);
 void printGraph(GraphKota G);
+
 void resetVisited(GraphKota &G);
 void printBFS(GraphKota &G, string start);
 void printDFS(GraphKota &G, string start);

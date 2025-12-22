@@ -1,4 +1,4 @@
-#include "graph.h"
+#include "graphKota.h"
 
 int main() {
     GraphKota G;

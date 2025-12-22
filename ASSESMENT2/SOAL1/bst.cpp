@@ -3,7 +3,7 @@
 void insertNode(adr &root, int id, string nama, int stok) {
     if (root == NULL) {
         root = new Node{id,nama,stok,NULL,NULL};
-    } else if (id < root->id) {
+    } else if (id < root->idProduk) {
         insertNode(root->left,id,nama,stok);
     } else {
         insertNode(root->right,id,nama,stok);
@@ -11,33 +11,36 @@ void insertNode(adr &root, int id, string nama, int stok) {
 }
 
 adr searchById(adr root, int id) {
-    if (root == NULL || root->id == id) return root;
-    if (id < root->id) return searchById(root->left,id);
+    if (root == NULL) return NULL;
+    if (root->idProduk == id) return root;
+    if (id < root->idProduk) return searchById(root->left,id);
     return searchById(root->right,id);
 }
 
 adr searchByProduct(adr root, string nama) {
     if (root == NULL) return NULL;
-    if (root->nama == nama) return root;
+    if (root->namaProduk == nama) return root;
     adr L = searchByProduct(root->left,nama);
     if (L != NULL) return L;
     return searchByProduct(root->right,nama);
 }
 
 adr findMin(adr root) {
+    if (root == NULL) return NULL;
     while (root->left != NULL) root = root->left;
     return root;
 }
 
 adr findMax(adr root) {
+    if (root == NULL) return NULL;
     while (root->right != NULL) root = root->right;
     return root;
 }
 
 adr deleteNode(adr root, int id) {
     if (root == NULL) return root;
-    if (id < root->id) root->left = deleteNode(root->left,id);
-    else if (id > root->id) root->right = deleteNode(root->right,id);
+    if (id < root->idProduk) root->left = deleteNode(root->left,id);
+    else if (id > root->idProduk) root->right = deleteNode(root->right,id);
     else {
         if (root->left == NULL) {
             adr t = root->right;
@@ -50,42 +53,42 @@ adr deleteNode(adr root, int id) {
             return t;
         }
         adr t = findMin(root->right);
-        root->id = t->id;
-        root->nama = t->nama;
+        root->idProduk = t->idProduk;
+        root->namaProduk = t->namaProduk;
         root->stok = t->stok;
-        root->right = deleteNode(root->right,t->id);
+        root->right = deleteNode(root->right,t->idProduk);
     }
     return root;
 }
 
-void inorder(adr root) {
+void inOrder(adr root) {
     if (root != NULL) {
-        inorder(root->left);
-        cout << "ID Produk   : " << root->id << endl;
-        cout << "Nama Produk : " << root->nama << endl;
+        inOrder(root->left);
+        cout << "ID Produk   : " << root->idProduk << endl;
+        cout << "Nama Produk : " << root->namaProduk << endl;
         cout << "Stok        : " << root->stok << endl;
         cout << "-----------------------------" << endl;
-        inorder(root->right);
+        inOrder(root->right);
     }
 }
 
-void preorder(adr root) {
+void preOrder(adr root) {
     if (root != NULL) {
-        cout << "ID Produk   : " << root->id << endl;
-        cout << "Nama Produk : " << root->nama << endl;
+        cout << "ID Produk   : " << root->idProduk << endl;
+        cout << "Nama Produk : " << root->namaProduk << endl;
         cout << "Stok        : " << root->stok << endl;
         cout << "-----------------------------" << endl;
-        preorder(root->left);
-        preorder(root->right);
+        preOrder(root->left);
+        preOrder(root->right);
     }
 }
 
-void postorder(adr root) {
+void postOrder(adr root) {
     if (root != NULL) {
-        postorder(root->left);
-        postorder(root->right);
-        cout << "ID Produk   : " << root->id << endl;
-        cout << "Nama Produk : " << root->nama << endl;
+        postOrder(root->left);
+        postOrder(root->right);
+        cout << "ID Produk   : " << root->idProduk << endl;
+        cout << "Nama Produk : " << root->namaProduk << endl;
         cout << "Stok        : " << root->stok << endl;
         cout << "-----------------------------" << endl;
     }

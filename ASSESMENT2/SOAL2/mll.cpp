@@ -1,30 +1,54 @@
 #include "mll.h"
 
-void createListParent(ListParent &L) {
-    L.first = L.last = NULL;
+void createListParent(ListParent &LP) {
+    LP.first = LP.last = NULL;
 }
 
-Genre* alokasiParent(string id, string nama) {
-    Genre *P = new Genre{id,nama,NULL,NULL,NULL,NULL};
+void createListChild(ListChild &LC) {
+    LC.first = LC.last = NULL;
+}
+
+ElmParent* alokasiNodeParent(string id, string nama) {
+    ElmParent *P = new ElmParent;
+    P->IDGenre = id;
+    P->namaGenre = nama;
+    P->next = P->prev = NULL;
+    P->firstChild = P->lastChild = NULL;
     return P;
 }
 
-Film* alokasiChild(string id, string judul, int durasi, int tahun, float rating) {
-    Film *C = new Film{id,judul,durasi,tahun,rating,NULL,NULL};
+ElmChild* alokasiNodeChild(string id, string judul, int durasi, int tahun, float rating) {
+    ElmChild *C = new ElmChild;
+    C->IDFilm = id;
+    C->judulFilm = judul;
+    C->durasiFilm = durasi;
+    C->tahunTayang = tahun;
+    C->ratingFilm = rating;
+    C->next = C->prev = NULL;
     return C;
 }
 
-void insertLastParent(ListParent &L, Genre *P) {
-    if (L.first == NULL) {
-        L.first = L.last = P;
+void dealokasiNodeParent(ElmParent* &P) {
+    delete P;
+    P = NULL;
+}
+
+void dealokasiNodeChild(ElmChild* &C) {
+    delete C;
+    C = NULL;
+}
+
+void insertFirstParent(ListParent &LP, ElmParent *P) {
+    if (LP.first == NULL) {
+        LP.first = LP.last = P;
     } else {
-        L.last->next = P;
-        P->prev = L.last;
-        L.last = P;
+        P->next = LP.first;
+        LP.first->prev = P;
+        LP.first = P;
     }
 }
 
-void insertLastChild(Genre *P, Film *C) {
+void insertLastChild(ElmParent *P, ElmChild *C) {
     if (P->firstChild == NULL) {
         P->firstChild = P->lastChild = C;
     } else {
@@ -34,66 +58,79 @@ void insertLastChild(Genre *P, Film *C) {
     }
 }
 
-void hapusListChild(Genre *P) {
-    Film *C = P->firstChild;
+void hapusListChild(ElmParent *P) {
+    ElmChild *C = P->firstChild;
     while (C != NULL) {
-        Film *t = C;
+        ElmChild *temp = C;
         C = C->next;
-        delete t;
+        dealokasiNodeChild(temp);
     }
     P->firstChild = P->lastChild = NULL;
 }
 
-void deleteAfterParent(ListParent &L, Genre *prev) {
-    Genre *P = prev->next;
+void deleteAfterParent(ListParent &LP, ElmParent *prev) {
+    ElmParent *P = prev->next;
     if (P != NULL) {
         prev->next = P->next;
         if (P->next != NULL) P->next->prev = prev;
-        else L.last = prev;
+        else LP.last = prev;
         hapusListChild(P);
-        delete P;
+        dealokasiNodeParent(P);
     }
 }
 
-void printStrukturMLL(ListParent L) {
-    Genre *P = L.first;
+void searchFilmByRatingRange(ListParent LP, float min, float max) {
+    ElmParent *P = LP.first;
+    int posParent = 1;
+    while (P != NULL) {
+        ElmChild *C = P->firstChild;
+        int posChild = 1;
+        while (C != NULL) {
+            if (C->ratingFilm >= min && C->ratingFilm <= max) {
+                cout << "Data Film ditemukan pada list child dari node parent " << P->namaGenre << " pada posisi ke-" << posChild << "!" << endl << endl;
+                cout << "Data Film (Child)" << endl;
+                cout << "Judul Film " << C->judulFilm << endl;
+                cout << "Posisi dalam list child posisi ke-" << posChild << endl;
+                cout << "ID Film: " << C->IDFilm << endl;
+                cout << "Durasi Film: " << C->durasiFilm << " menit" << endl;
+                cout << "Tahun Tayang : " << C->tahunTayang << endl;
+                cout << "Rating Film : " << C->ratingFilm << endl << endl;
+                cout << "Data Genre (Parent)" << endl;
+                cout << "ID Genre : " << P->IDGenre << endl;
+                cout << "Posisi dalam list parent posisi ke-" << posParent << endl;
+                cout << "Nama Genre: " << P->namaGenre << endl << endl;
+            }
+            C = C->next;
+            posChild++;
+        }
+        P = P->next;
+        posParent++;
+    }
+}
+
+void printStrukturMLL(ListParent LP) {
+    ElmParent *P = LP.first;
     int i = 1;
     while (P != NULL) {
-        cout << "===== PARENT " << i << " =====" << endl;
-        cout << "ID Genre   : " << P->id << endl;
-        cout << "Nama Genre : " << P->nama << endl;
-        Film *C = P->firstChild;
+        cout << "=== Parent " << i << " ===" << endl;
+        cout << "ID Genre: " << P->IDGenre << endl;
+        cout << "Nama Genre: " << P->namaGenre << endl;
+        ElmChild *C = P->firstChild;
         int j = 1;
         if (C == NULL) cout << "-" << endl;
         while (C != NULL) {
-            cout << "  Child " << j << endl;
-            cout << "  ID Film      : " << C->id << endl;
-            cout << "  Judul Film   : " << C->judul << endl;
-            cout << "  Durasi Film  : " << C->durasi << " menit" << endl;
-            cout << "  Tahun Tayang : " << C->tahun << endl;
-            cout << "  Rating Film  : " << C->rating << endl;
+            cout << endl;
+            cout << "Child " << j << ":" << endl;
+            cout << "ID Film: " << C->IDFilm << endl;
+            cout << "Judul Film: " << C->judulFilm << endl;
+            cout << "Durasi Film: " << C->durasiFilm << " menit" << endl;
+            cout << "Tahun Tayang : " << C->tahunTayang << endl;
+            cout << "Rating Film : " << C->ratingFilm << endl;
             C = C->next;
             j++;
         }
-        cout << "-----------------------------" << endl;
+        cout << endl;
         P = P->next;
         i++;
-    }
-}
-
-void searchFilmByRatingRange(ListParent L, float min, float max) {
-    Genre *P = L.first;
-    while (P != NULL) {
-        Film *C = P->firstChild;
-        while (C != NULL) {
-            if (C->rating >= min && C->rating <= max) {
-                cout << "Judul Film : " << C->judul << endl;
-                cout << "Genre      : " << P->nama << endl;
-                cout << "Rating     : " << C->rating << endl;
-                cout << "-----------------------------" << endl;
-            }
-            C = C->next;
-        }
-        P = P->next;
     }
 }

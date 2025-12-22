@@ -1,4 +1,4 @@
-#include "graph.h"
+#include "graphKota.h"
 
 void createGraph(GraphKota &G) {
     G.first = NULL;
@@ -15,7 +15,7 @@ adrKota alokasiNode(string nama) {
 
 adrEdge alokasiEdge(adrKota tujuan, int jarak) {
     adrEdge E = new ElmEdge;
-    E->tujuan = tujuan;
+    E->kotaTujuan = tujuan;
     E->jarak = jarak;
     E->next = NULL;
     return E;
@@ -48,30 +48,48 @@ void connectNode(GraphKota &G, string A, string B, int jarak) {
     }
 }
 
-void deleteNode(GraphKota &G, string nama) {
-    adrKota P = G.first;
-    while (P != NULL) {
-        adrEdge *E = &P->firstEdge;
-        while (*E != NULL) {
-            if ((*E)->tujuan->namaKota == nama) {
-                adrEdge temp = *E;
-                *E = (*E)->next;
+void disconnectNode(GraphKota &G, string A, string B) {
+    adrKota X = findNode(G,A);
+    adrKota Y = findNode(G,B);
+    if (X != NULL && Y != NULL) {
+        adrEdge *p = &X->firstEdge;
+        while (*p != NULL) {
+            if ((*p)->kotaTujuan == Y) {
+                adrEdge temp = *p;
+                *p = (*p)->next;
                 delete temp;
                 break;
             }
-            E = &(*E)->next;
+            p = &(*p)->next;
         }
+        p = &Y->firstEdge;
+        while (*p != NULL) {
+            if ((*p)->kotaTujuan == X) {
+                adrEdge temp = *p;
+                *p = (*p)->next;
+                delete temp;
+                break;
+            }
+            p = &(*p)->next;
+        }
+    }
+}
+
+void deleteNode(GraphKota &G, string nama) {
+    adrKota P = G.first;
+    while (P != NULL) {
+        disconnectNode(G, P->namaKota, nama);
         P = P->next;
     }
-    adrKota *Q = &G.first;
-    while (*Q != NULL) {
-        if ((*Q)->namaKota == nama) {
-            adrKota temp = *Q;
-            *Q = (*Q)->next;
+    adrKota *q = &G.first;
+    while (*q != NULL) {
+        if ((*q)->namaKota == nama) {
+            adrKota temp = *q;
+            *q = (*q)->next;
             delete temp;
             break;
         }
-        Q = &(*Q)->next;
+        q = &(*q)->next;
     }
 }
 
@@ -82,7 +100,7 @@ void printGraph(GraphKota G) {
         cout << "Node " << P->namaKota << " terhubung ke: ";
         adrEdge E = P->firstEdge;
         while (E != NULL) {
-            cout << E->tujuan->namaKota << " (" << E->jarak << " KM)";
+            cout << E->kotaTujuan->namaKota << " (" << E->jarak << " KM)";
             if (E->next != NULL) cout << ", ";
             E = E->next;
         }
@@ -112,9 +130,9 @@ void printBFS(GraphKota &G, string start) {
             cout << P->namaKota << endl;
             adrEdge E = P->firstEdge;
             while (E != NULL) {
-                if (E->tujuan->visited == 0) {
-                    E->tujuan->visited = 1;
-                    Q.push(E->tujuan);
+                if (E->kotaTujuan->visited == 0) {
+                    E->kotaTujuan->visited = 1;
+                    Q.push(E->kotaTujuan);
                 }
                 E = E->next;
             }
@@ -134,8 +152,8 @@ void printDFS(GraphKota &G, string start) {
             cout << P->namaKota << endl;
             adrEdge E = P->firstEdge;
             while (E != NULL) {
-                if (E->tujuan->visited == 0) {
-                    S.push(E->tujuan);
+                if (E->kotaTujuan->visited == 0) {
+                    S.push(E->kotaTujuan);
                 }
                 E = E->next;
             }

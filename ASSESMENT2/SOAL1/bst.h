@@ -5,8 +5,8 @@
 using namespace std;
 
 struct Node {
-    int id;
-    string nama;
+    int idProduk;
+    string namaProduk;
     int stok;
     Node *left;
     Node *right;
@@ -20,9 +20,9 @@ adr searchByProduct(adr root, string nama);
 adr findMin(adr root);
 adr findMax(adr root);
 adr deleteNode(adr root, int id);
-void inorder(adr root);
-void preorder(adr root);
-void postorder(adr root);
+void inOrder(adr root);
+void preOrder(adr root);
+void postOrder(adr root);
 void deleteTree(adr &root);
 
 #endif
